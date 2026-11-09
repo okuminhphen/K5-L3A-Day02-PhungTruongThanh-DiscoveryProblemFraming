@@ -1,16 +1,15 @@
-# Báo cáo cá nhân — MSSV_HoTen
+# Báo cáo cá nhân — 2A202603696_MaiVanThanh
 
-> Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
-> Mỗi thành viên một file trong `report/individual/` trên repo nhóm: copy template này thành file mới, điền, rồi commit bằng tài khoản GitHub của bạn. Không viết hộ người khác.
+> Các ô `[cần bổ sung]` là phần chờ bổ sung dữ liệu thực tế, chưa phải dữ liệu đã đo.
 
 ## 1. Thông tin học viên
 
-- Họ tên:Mai Văn Thanh
-- MSSV:2A202603696
+- Họ tên: Mai Văn Thanh
+- MSSV: 2A202603696
 - Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm:PhungTruongThanh
-- Link repo nhóm:https://github.com/okuminhphen/K5-L3A-Day02-PhungTruongThanh-DiscoveryProblemFraming
+- Tên nhóm: PhungTruongThanh
+- Link repo nhóm: https://github.com/okuminhphen/K5-L3A-Day02-PhungTruongThanh-DiscoveryProblemFraming
 
 ---
 
@@ -59,9 +58,21 @@ Quy trình nháp hiện tại:
 
 ```text
 HIỆN TẠI — khoảng 3–4 ngày ôn/môn (ước lượng)
-[1 Nhận tài liệu trong nhóm lớp] → [2 Đọc lướt] → [3 Chọn mục trọng tâm: khoảng 1 ngày]
-→ [4 Ôn tập trung các mục đã chọn]
+[1 Nhận tài liệu: t1 phút] → [2 Đọc lướt: t2 phút]
+→ [3 Chọn mục trọng tâm: t3 phút, khoảng 1 ngày học] ← BOTTLENECK DỰ KIẾN
+→ [4 Ôn tập trung các mục đã chọn: t4 phút]
 ```
+
+| Bước | Thời gian cần bổ sung | Cách ghi |
+|---:|---|---|
+| 1 | [cần bổ sung] phút | Thời gian nhận/tải tài liệu. |
+| 2 | [cần bổ sung] phút | Chỉ tính đọc lướt, tách khỏi chọn trọng tâm. |
+| 3 | [cần bổ sung] phút học thực tế | Đổi ước lượng “một ngày học” sang số phút thực học; không mặc định là 24 giờ. |
+| 4 | [cần bổ sung] phút học thực tế | Tổng thời gian ôn sau khi đã chọn mục. |
+
+**Điểm cần xác nhận:** CP1 đang ghi 3–4 ngày để đọc/ôn tài liệu, còn card này ghi 3–4 ngày **mỗi môn**. Cần xác nhận đơn vị trước khi dùng làm baseline. Ghi riêng thời gian học thực tế (t1 + t2 + t3 + t4) và số ngày lịch; không cộng lẫn hai đơn vị.
+
+**Cách đo đề xuất:** ghi giờ bắt đầu/kết thúc từng bước cho một môn, trừ thời gian nghỉ. Nếu thử phương án mới, dùng phần tài liệu có khối lượng/độ khó tương đương và bài tự kiểm tra cùng cấu trúc. Baseline chất lượng và ngưỡng đạt cần được xác định trước khi thử; chưa thể khẳng định giữ nguyên điểm thi chỉ từ thời gian ôn.
 
 ### Problem Card #2
 
@@ -76,15 +87,27 @@ HIỆN TẠI — khoảng 3–4 ngày ôn/môn (ước lượng)
 | Success metric (baseline → target)        | Baseline: khoảng 5–10 phút/buổi. Mục tiêu thử nghiệm đề xuất: không quá 2 phút/buổi và không phải đọc lại tên; cần xác nhận với giảng viên, chưa phải kết quả thực tế. |
 | Phương án không dùng AI                   | Dùng danh sách lớp và quy trình điểm danh thống nhất; có thể thử biểu mẫu/QR để sinh viên tự xác nhận, sau đó giảng viên đối chiếu danh sách.                          |
 | Giả thuyết về AI (nếu có)                 | Chưa thấy cần AI; quy trình rõ ràng hoặc công cụ xác nhận theo quy tắc có thể đủ.                                                                                      |
-| Cảm nhận nhanh                            | Rule / Workflow; nên thử cách đơn giản trước, chưa cần Agent.                                                                                                          |
+| Cảm nhận nhanh                            | Rule nếu dùng biểu mẫu/QR và đối chiếu danh sách; No AI nếu chỉ thống nhất cách gọi tên. Chưa có bước nào cần AI để chọn Workflow. |
 
 Quy trình nháp hiện tại:
 
 ```text
 HIỆN TẠI — khoảng 5–10 phút/buổi
-[1 Giảng viên đọc tên] → [2 Sinh viên có mặt giơ tay] → [3 Giảng viên ghi nhận]
-→ [4 Lớp ồn/không nghe rõ: đọc lại tên]
+[Với từng sinh viên: 1 Giảng viên đọc tên → 2 Sinh viên giơ tay → 3 Giảng viên ghi nhận]
+→ [4 Nếu chưa xác nhận được: quay lại gọi tên và xác nhận]
+Lặp đến hết danh sách. Bước nghẽn dự kiến: bước 1 (gọi lần lượt), cần đo để xác nhận.
 ```
+
+| Bước | Tổng thời gian trong một buổi | Lưu ý |
+|---:|---|---|
+| 1 | [cần bổ sung] phút | Tổng thời gian gọi tên lần đầu. |
+| 2 | [cần bổ sung] phút | Tổng thời gian chờ phản hồi, không tính trùng bước 1. |
+| 3 | [cần bổ sung] phút | Tổng thời gian ghi nhận vào danh sách. |
+| 4 | [cần bổ sung] phút | Thời gian gọi/xác nhận lại, ghi 0 nếu không phát sinh. |
+
+**Điểm cần xác nhận:** 5–10 phút là tổng quy trình, chưa phải thời gian của bottleneck. Chưa đủ dữ liệu kết luận gọi tên lần đầu hay gọi lại mới là bước tốn nhất.
+
+**Cách đo đề xuất:** quan sát và ghi thời gian từng bước trong 3 buổi, sau đó so sánh với 3 buổi thử phương án mới nếu giảng viên đồng ý. Ngoài mục tiêu không quá 2 phút/buổi, theo dõi số trường hợp ghi có mặt/vắng sai sau đối chiếu; đề xuất ngưỡng 0 trường hợp ghi sai chưa được xử lý trước khi chốt danh sách.
 
 ### Problem Card #3
 
@@ -99,20 +122,30 @@ HIỆN TẠI — khoảng 5–10 phút/buổi
 | Success metric (baseline → target)        | Baseline: cần hỗ trợ vài lần mỗi tuần, khoảng 5–10 phút/lần. Mục tiêu thử nghiệm đề xuất: giảm một nửa số lần phải nhắc lại cùng thao tác sau khi có hướng dẫn dễ nhớ; cần ghi lại trong 2 tuần để xác nhận baseline và mục tiêu. |
 | Phương án không dùng AI                   | Tạo hướng dẫn ngắn bằng chữ/hình cho từng thao tác, chỉ dẫn bố mẹ thực hành lại; không ghi mật khẩu, mã OTP hay thông tin tài khoản vào hướng dẫn.                                                                                |
 | Giả thuyết về AI (nếu có)                 | Có thể nhờ AI diễn đạt hướng dẫn thành các bước đơn giản, nhưng cần tự kiểm tra từng bước trên ứng dụng thật. Không cung cấp thông tin đăng nhập/mã OTP cho AI và không để AI thực hiện giao dịch.                                |
-| Cảm nhận nhanh                            | Workflow (hướng dẫn/checklist có người kiểm tra; không cần Agent).                                                                                                                                                                |
+| Cảm nhận nhanh                            | No AI: thử hướng dẫn bằng hình/checklist và cho bố mẹ thực hành trước. Chỉ cân nhắc Workflow nếu thực sự có bước AI hỗ trợ; có checklist và người kiểm tra chưa đủ để gọi là Workflow. |
 
 Quy trình nháp hiện tại:
 
 ```text
 HIỆN TẠI — vài lần/tuần, khoảng 5–10 phút/lần
-[1 Bố mẹ hỏi khi gặp thao tác khó] → [2 Tôi quan sát đang ở bước nào]
-→ [3 Tôi chỉ từng bước và mẹo ghi nhớ] → [4 Bố mẹ thử lại; tôi giải thích lại nếu cần]
+[1 Bố mẹ hỏi: t1 phút] → [2 Tôi quan sát: t2 phút]
+→ [3 Tôi chỉ từng bước và mẹo ghi nhớ: t3 phút] ← BOTTLENECK DỰ KIẾN
+→ [4 Bố mẹ thử lại, quay về bước 3 nếu cần: t4 phút]
 ```
+
+| Bước | Thời gian cần bổ sung | Cách ghi |
+|---:|---|---|
+| 1 | [cần bổ sung] phút | Thời gian bố mẹ mô tả thao tác cần hỗ trợ. |
+| 2 | [cần bổ sung] phút | Thời gian xác định màn hình/bước đang gặp khó. |
+| 3 | [cần bổ sung] phút | Cộng cả các lượt hướng dẫn lại; chưa đo riêng nên bottleneck mới là giả thuyết. |
+| 4 | [cần bổ sung] phút | Thời gian bố mẹ tự thực hành, không tính trùng thời gian hướng dẫn ở bước 3. |
+
+**Cách đo đề xuất:** trong tuần đầu, ghi số lần cần nhắc lại cho từng thao tác và thời gian hỗ trợ; tuần tiếp theo thử hướng dẫn bằng hình cho cùng thao tác. Đề xuất mục tiêu số lần nhắc giảm ít nhất 50% so với tuần đầu. Tách thao tác gọi điện khỏi thao tác ngân hàng để tránh so sánh hai việc khác nhau.
 
 ### Card muốn pitch nhất
 
-- Card số: Chưa chọn; tạm cân nhắc Card #1 vì khối lượng tài liệu và thời gian ôn mỗi môn khá lớn.
-- Vì sao: Đây mới là gợi ý dựa trên số liệu CP1, chưa phải lựa chọn cuối cùng của tôi.
+- Card số: #1 — Ôn thi cuối kỳ từ nhiều tài liệu PDF.
+- Vì sao: Khối lượng tài liệu lớn (6–7 môn/kỳ, khoảng 150–300 trang/môn), quy trình ôn có thể mô tả rõ và bước chọn nội dung trọng tâm mất nhiều thời gian theo ước lượng ban đầu. Tôi chọn card này để pitch và nhờ nhóm phản biện cách xác định trọng tâm, đo thời gian và kiểm tra chất lượng ôn tập.
 - Câu hỏi muốn nhóm phản biện: Làm sao xác định nội dung trọng tâm có căn cứ, thay vì chỉ đoán nội dung có thể vào đề?
 
 ### AI đã phản biện card thế nào
@@ -122,6 +155,8 @@ HIỆN TẠI — vài lần/tuần, khoảng 5–10 phút/lần
 | Thời gian chọn trọng tâm “một ngày” và tổng thời gian ôn 3–4 ngày/môn chưa được bấm giờ. | Chưa xác nhận; cần tự kiểm tra lại.      | Ghi rõ đây là ước lượng, đề xuất bấm giờ ở kỳ ôn tiếp theo.                                           |
 | Mục tiêu giảm thời gian ôn có thể khiến bỏ sót kiến thức nếu không đo chất lượng học.    | Chưa xác nhận; đây là điểm cần cân nhắc. | Gắn mục tiêu thời gian với điều kiện kết quả kiểm tra không giảm; mục tiêu chỉ là đề xuất thử nghiệm. |
 | Điểm danh mất 5–10 phút nhưng chưa biết riêng phần đọc lại tốn bao lâu.                  | Chưa xác nhận; cần tự kiểm tra lại.      | Ghi rõ thời gian đọc lại chưa được tách riêng và đề xuất kiểm chứng với giảng viên.                   |
+| CP1 và Card #1 chưa thống nhất đơn vị 3–4 ngày; sơ đồ chưa có thời gian từng bước. | Cần tự xác nhận số liệu. | Đánh dấu chỗ cần xác nhận, thêm bảng ghi phút từng bước; chưa tự gán số đo. |
+| Checklist có người kiểm tra không đồng nghĩa với Workflow có AI. | Cần tự chốt sau khi thử phương án đơn giản. | Sửa nhãn Card #2 thành No AI/Rule tùy phương án; Card #3 ưu tiên No AI. |
 
 ---
 
@@ -152,6 +187,8 @@ HIỆN TẠI — vài lần/tuần, khoảng 5–10 phút/lần
 | CP5 Quy trình                  |                        |                   |                            |                                     |
 | CP5–6 Problem Statement        |                        |                   |                            |                                     |
 | CP6 Mức can thiệp / quyết định |                        |                   |                            |                                     |
+
+**Ghi nhận lần rà soát này (AI ghi, học viên cần tự xác nhận):** AI đọc bài mẫu, yêu cầu và báo cáo hiện có; sửa tiêu đề/định dạng, chỉ ra thiếu thời gian từng bước, sự không thống nhất của đơn vị “ngày” và nhãn Workflow. AI thêm khung ghi số liệu và cách đo đề xuất. Học viên cần cập nhật các hàng trên theo cách dùng AI thực tế và quyết định mình đã chấp nhận hoặc bác bỏ; chưa ghi các thay đổi tự động thành nhận định cá nhân đã được xác nhận.
 
 ---
 
