@@ -6,11 +6,11 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên:
-- MSSV:
+- Họ tên: Lê Minh Phụng
+- MSSV:2A202603693
 - Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm:
-- Link repo nhóm:
+- Tên nhóm:PhungTruongThanh
+- Link repo nhóm: https://github.com/okuminhphen/K5-L3A-Day02-PhungTruongThanh-DiscoveryProblemFraming/tree/main
 
 ---
 
@@ -143,18 +143,18 @@ HIỆN TẠI — 20 phút/lần hỗ trợ
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-| Hoạt động                  | Tôi đã làm gì?         | Kết quả / ảnh hưởng tới bài nhóm |
-| -------------------------- | ---------------------- | -------------------------------- |
-| Pitch Problem Card         |                        |                                  |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt:    |                                  |
-| Nhận phản biện             | Câu hỏi tôi nhận được: | Tôi đã sửa gì:                   |
-| Gom cluster / cây OST      |                        |                                  |
-| Chọn candidate problem     |                        |                                  |
-| Kiểm chứng / research      |                        |                                  |
-| Quy trình nhóm             |                        |                                  |
-| Problem Statement          |                        |                                  |
-| Mức can thiệp AI           |                        |                                  |
-| Quyết định                 |                        |                                  |
+| Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
+|---|---|---|
+| Pitch Problem Card | Trình bày 3 candidate IT nội bộ, chọn pitch Candidate A1 (Báo lỗi thiếu thông tin) | Nhóm đưa A1 vào shortlist chấm điểm CP3 |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: <br>- Cho B1 (Trường): *"Discord đã có tính năng ghim tin nhắn và kênh #announcement, tại sao vẫn bị trôi?"* <br>- Cho B3 (Trường): *"Nếu dùng Google Docs hoặc chia file Markdown riêng thì có còn conflict không?"* <br>- Cho C2 (Thanh): *"Lớp đã có mã QR quét điểm danh chưa, rào cản là công nghệ hay thói quen?"* | Giúp Trường và Thanh làm rõ bottleneck thật sự và tính khả thi của bài toán |
+| Nhận phản biện | Câu hỏi tôi nhận được: *"Nếu bắt điền biểu mẫu nhiều trường thì người dùng có lười rồi vẫn nhắn tin tự do không?"* (Trường hỏi) | Tôi đã sửa gì: Đặt cảm nhận nhanh là Rule (thử biểu mẫu bắt buộc trước), bổ sung giả thuyết AI chỉ hỗ trợ gợi ý trường thiếu khi người dùng gõ tự do |
+| Gom cluster / cây OST | Điều phối và cùng nhóm gom 9 candidate thành 5 cluster (A đến E), dựng cây OST | Thống nhất nhóm bài toán "Tìm và chọn thông tin cần thiết" (Cluster A) |
+| Chọn candidate problem | Chấm điểm shortlist 3 candidate (B1, C1, A1) trên 7 tiêu chí | Nhất trí chọn B1 (31/35) vì phạm vi hẹp, dễ tiếp cận học viên để kiểm chứng tại lab |
+| Kiểm chứng / research | Dự kiến phụ trách research giải pháp có sẵn (CP4) | Chưa thực hiện |
+| Quy trình nhóm | Dự kiến hỗ trợ Thanh vẽ quy trình trước/sau (CP5) | Chưa thực hiện |
+| Problem Statement | Dự kiến phản biện bản v0 và v1 | Chưa thực hiện |
+| Mức can thiệp AI | Dự kiến hỗ trợ Trường so sánh 4 mức (CP6) | Chưa thực hiện |
+| Quyết định | Dự kiến tổng hợp 4 rủi ro và kết luận Go/Not Yet/No-Go (CP6) | Chưa thực hiện |
 
 ---
 

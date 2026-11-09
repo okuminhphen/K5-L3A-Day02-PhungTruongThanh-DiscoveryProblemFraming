@@ -5,9 +5,9 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: PhungTruongThanh
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
+- Candidate problem được chọn (1 câu): Khó tìm và nhận biết các thông báo quan trọng (hạn nộp bài, đổi lịch) bị trôi trong kênh Discord học tập (Candidate B1).
 - Quyết định cuối: Go / Not Yet / No-Go
 
 ---
@@ -43,33 +43,41 @@
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: Giảm thời gian tiếp nhận, làm rõ và phân loại yêu cầu hỗ trợ kỹ thuật từ 25 phút xuống dưới 5 phút cho nhân viên IT Helpdesk
-├── Opportunity 1: Người dùng báo lỗi cụt lủn, thiếu thông tin thiết bị và ảnh chụp lỗi, buộc IT phải chat hỏi lại 2–3 lượt (A1)
-├── Opportunity 2: Yêu cầu gửi rải rác qua nhiều kênh (Slack, Zalo, Email, trực tiếp), khó đối chiếu trạng thái dẫn đến nguy cơ sót việc hoặc xử lý trùng (A2)
-└── Opportunity 3: Tài liệu hướng dẫn lỗi thường gặp bị phân tán ở nhiều nơi, mất 8–10 phút mỗi lần tìm lại để soạn câu trả lời (A3)
+OUTCOME: Giảm thời gian học viên tìm kiếm và nhận biết các thông báo quan trọng (hạn nộp, đổi lịch) trên Discord từ 15 phút/ngày xuống dưới 3 phút/ngày
+├── Opportunity 1: Thông báo bài tập và đổi lịch bị trôi lẫn trong hàng trăm tin nhắn thảo luận hằng ngày trên server Discord (B1)
+├── Opportunity 2: Người học gặp khó khi phải đọc lướt và lọc thông tin trọng tâm từ nhiều tài liệu/thông báo khác nhau (C1)
+└── Opportunity 3: Hướng dẫn kỹ thuật và thông báo cũ khó tìm lại nhanh khi cần tra cứu (A3)
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
-- ✗ *"Xây dựng chatbot AI tự động hỗ trợ kỹ thuật trên Slack"* ← Solution đội lốt opportunity (nhóm cần giải quyết việc thiếu thông tin và tìm kiếm, chatbot chỉ là một công cụ khả dĩ).
-- ✗ *"Triển khai hệ thống Jira Service Management hoặc Google Form bắt buộc"* ← Solution đội lốt opportunity (nhu cầu gốc là thu thập đủ thông tin triệu chứng ngay từ đầu).
-- ✗ *"Tạo trang Notion Wiki tập trung tất cả tài liệu IT"* ← Solution đội lốt opportunity (nhu cầu gốc là rút ngắn thời gian tìm và gửi hướng dẫn phù hợp cho người dùng).
+- ✗ *"Xây dựng bot Discord AI tự động tóm tắt tin nhắn"* ← Solution đội lốt opportunity (nhu cầu gốc là lọc nhận biết thông báo quan trọng, bot chỉ là một công cụ khả dĩ).
+- ✗ *"Tạo kênh #announcement riêng và ping @everyone bắt buộc"* ← Solution đội lốt opportunity (đây là cách tổ chức kênh/quy định, chưa giải quyết được việc người dùng bị bội thực thông báo).
+- ✗ *"Dùng chatbot hỏi đáp tự động trên Discord"* ← Solution đội lốt opportunity.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| B1 — Trường: Tìm thông báo quan trọng trên Discord | 5 | 5 | 3 | 4 | 5 | 5 | 4 | **31/35** |
+| C1 — Thanh: Chọn nội dung ưu tiên ôn từ nhiều PDF | 5 | 4 | 3 | 3 | 3 | 4 | 4 | **26/35** |
+| A1 — Phụng: Yêu cầu báo lỗi thiếu thông tin | 4 | 4 | 1 | 4 | 4 | 4 | 3 | **24/35** |
 
-**Candidate được chọn:**
+**Candidate được chọn:** B1 — Tìm thông báo quan trọng trên Discord (của Trường).
 
 **Vì sao chọn:**
+- Đạt điểm cao nhất (31/35) trên 7 tiêu chí.
+- Quy trình cụ thể, phạm vi nhỏ, vừa sức giải quyết trong một buổi lab.
+- Rất dễ tiếp cận đối tượng học viên ngay tại lớp để phỏng vấn kiểm chứng và đo lường tác động thực tế (nhóm chọn B1 vì bài toán rõ ràng, dễ đo lường chứ không phải vì có thể dùng AI).
+- So sánh được rõ ràng giữa các mức can thiệp: No AI (kênh riêng/ghim tin), Rule (bot lọc keyword), Workflow và Agent.
 
 **Vì sao loại các candidate còn lại:**
+- **Loại C1 (Chọn nội dung ưu tiên ôn từ nhiều PDF — 26/35):** Trải nghiệm cá nhân rõ nhưng thời gian đọc/chọn chỉ là ước lượng; rất khó kiểm chứng ngay trong một buổi lab rằng việc rút ngắn thời gian chọn tài liệu vẫn đảm bảo chất lượng ôn thi.
+- **Loại A1 (Yêu cầu báo lỗi thiếu thông tin — 24/35):** Dù có thể đo số lượt hỏi lại và thời gian tiếp nhận, nhưng hiện chưa có tình huống thật hay số liệu đo lường trực tiếp tại lớp; đối tượng nhân viên IT và người dùng nội bộ khó tiếp cận để kiểm chứng ngay trong buổi lab hơn so với học viên.
 
 **Xử lý bất đồng (nếu có):**
+- Điểm “nhóm hiểu domain” ở cả 3 dòng hiện là ước tính ban đầu của nhóm, cần được điều chỉnh lại sau khi kiểm chứng thực tế với người dùng.
+- Nhóm thống nhất: B1 có bằng chứng mới ở mức mô tả trong báo cáo (thời gian 15 phút/ngày chưa đo thực tế, chưa thể coi cả lớp đều gặp vấn đề). Nhóm quyết định đưa giả định này vào CP4 để phỏng vấn/khảo sát các bạn học viên khác trong lớp nhằm xác thực mức độ đau thật sự trước khi bước vào thiết kế giải pháp.
 
 ---
 
