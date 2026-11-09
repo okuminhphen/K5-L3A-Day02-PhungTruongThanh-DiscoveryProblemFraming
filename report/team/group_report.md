@@ -8,7 +8,7 @@
 - Tên nhóm: PhungTruongThanh
 - Thành viên: xem `TEAM.md`
 - Candidate problem được chọn (1 câu): Khó tìm và nhận biết các thông báo quan trọng (hạn nộp bài, đổi lịch) bị trôi trong kênh Discord học tập (Candidate B1).
-- Quyết định cuối: Go / Not Yet / No-Go
+- Quyết định cuối: Not Yet (Cần phỏng vấn thực tế ngoài nhóm và thử nghiệm quy ước No AI trước)
 
 ---
 
@@ -44,9 +44,9 @@ Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không ph
 
 ```text
 OUTCOME: Giảm thời gian học viên tìm kiếm và nhận biết các thông báo quan trọng (hạn nộp, đổi lịch) trên Discord từ 15 phút/ngày xuống dưới 3 phút/ngày
-├── Opportunity 1: Thông báo bài tập và đổi lịch bị trôi lẫn trong hàng trăm tin nhắn thảo luận hằng ngày trên server Discord (B1)
-├── Opportunity 2: Người học gặp khó khi phải đọc lướt và lọc thông tin trọng tâm từ nhiều tài liệu/thông báo khác nhau (C1)
-└── Opportunity 3: Hướng dẫn kỹ thuật và thông báo cũ khó tìm lại nhanh khi cần tra cứu (A3)
+├── Opportunity 1: Thông báo bài tập và đổi lịch bị trôi lẫn trong hàng trăm tin nhắn thảo luận hằng ngày trong các kênh chat chung
+├── Opportunity 2: Tính năng ghim tin (Pinned Messages) không được dọn dẹp thường xuyên, lẫn lộn giữa thông báo cũ đã hết hạn và thông báo mới
+└── Opportunity 3: Từ khóa tìm kiếm không đồng nhất giữa các môn/mentor, khiến việc dùng Discord Search khó ra đúng thông báo mới nhất
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
@@ -87,47 +87,69 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Ngoài Trường, các học viên khác cũng mất thời gian tìm thông báo hạn nộp hoặc đổi lịch trên Discord. | Value | 5 | 2 | Có |
+| 2 | Khó khăn chủ yếu nằm ở việc nhận ra thông báo quan trọng giữa nhiều tin thảo luận, không chỉ do học viên ít mở Discord. | Value | 5 | 1 | Có |
+| 3 | Ghim tin, kênh thông báo riêng và tìm kiếm có sẵn chưa đủ giải quyết khó khăn trong bối cảnh lớp. | Value | 5 | 1 | Có |
+| 4 | Học viên có thể tìm và mở đúng tin gốc từ một danh sách thông báo ngắn. | Usability | 4 | 1 | Sau khi xác nhận pain |
+| 5 | Nhóm có thể tiếp cận hợp lệ các tin cần thiết và nhận biết bản thông báo mới nhất, kể cả khi lịch thay đổi. | Feasibility | 5 | 1 | Có |
+| 6 | Ban quản trị cho phép cách tiếp cận dữ liệu dự kiến; công sức duy trì và chi phí phù hợp với nhóm. | Viability | 5 | 1 | Có, trước khi thử tích hợp |
 
-*Điền 4–6 giả định; xóa dòng thừa.*
+**Giả định nhóm ưu tiên kiểm chứng trong buổi này:**
 
-Giả định nhóm kiểm chứng trong buổi này:
+Ưu tiên giả định 1, 2 và 3: xác nhận vấn đề có xuất hiện ở học viên ngoài nhóm, xác định bước thực sự gây khó khăn và kiểm tra lý do các tính năng sẵn có chưa đủ. Đồng thời hỏi người quản lý kênh về quyền tiếp cận dữ liệu trước khi đề xuất tích hợp.
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
+**Cách làm phù hợp nhất:** Phỏng vấn nhanh 2–3 học viên ngoài nhóm (mỗi người khoảng 5 phút, không cần hỏi cả lớp). Sử dụng các câu hỏi gợi nhớ về sự việc đã diễn ra trong thực tế:
+- *Lần gần nhất bạn tìm một thông báo hạn nộp hoặc đổi lịch trên Discord là khi nào?*
+- *Bạn đã tìm bằng cách nào? Có thể mô tả hoặc thao tác lại không?*
+- *Bạn mất khoảng bao lâu? Con số đó được đo hay ước lượng?*
+- *Gần đây có lần nào bạn bỏ sót hoặc hiểu nhầm thông báo không? Hậu quả là gì?*
+- *Bạn đã dùng ghim tin, kênh thông báo hoặc tìm kiếm chưa? Lần gần nhất dùng có tìm được không?*
+- *Có trường hợp nào bạn tìm rất nhanh, không gặp khó khăn không? Vì sao?*
 
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
+**Trạng thái ghi nhận hiện tại:**
+> Nhóm chưa thực hiện phỏng vấn hoặc survey ngoài nhóm. Hiện có mô tả trải nghiệm của Trường trong CP2; thời gian 15 phút/ngày là ước lượng, chưa phải baseline đã đo và chưa đại diện cho cả lớp.
 
-| Trường | Nội dung |
+Interview snapshot (mẫu ghi nhận thông tin cần thu thập khi phỏng vấn):
+
+| Trường | Nội dung cần ghi từ buổi phỏng vấn |
 |---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+| Người được hỏi | Vai trò, lớp hoặc bối cảnh liên quan (không ghi tên thật) |
+| Thời điểm và cách hỏi | Ngày, giờ; phỏng vấn trực tiếp hoặc gọi điện |
+| Câu nói đáng nhớ nhất | Nguyên văn câu trả lời thực tế của người được hỏi |
+| Lần gần nhất gặp vấn đề | Thông báo cần tìm, cách tìm và kết quả thực tế |
+| Workaround hiện tại | Ghim tin, tìm kiếm, hỏi bạn bè, tự ghi chú... |
+| Mất bao lâu, bao lần? | Số liệu thực tế (phân biệt rõ giữa đo trực tiếp và ước lượng) |
+| Insight / opportunity rút ra | Nhận định rút ra kèm giới hạn của bằng chứng |
 
 Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Báo cáo cá nhân của Trường — CP2 | 1 người trong nhóm (chưa tính là phỏng vấn CP4) | Có mô tả mất thời gian đọc tin và từng bỏ sót thông báo | Chưa thu thập; chưa biết các tính năng có sẵn đã đủ với học viên khác hay chưa |
+| Phỏng vấn học viên ngoài nhóm | 0 | Chưa có dữ liệu | Chưa có dữ liệu |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
 
+Chưa có kết luận sau kiểm chứng. Phạm vi hiện tại tập trung vào việc tìm và nhận biết thông báo hạn nộp, đổi lịch trên Discord; chưa mở rộng sang tổng hợp tài liệu học tập hoặc hướng dẫn IT. Nhóm sẽ điều chỉnh phạm vi, baseline và mục tiêu sau khi có dữ liệu ngoài nhóm. *(Đoạn này cần cập nhật sau khi hoàn thành phỏng vấn; không để trạng thái này rồi coi CP4 đã hoàn thành).*
+
 ### 3.3. Research giải pháp đã có
 
-| Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
+| Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro cần kiểm tra | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| **Discord Search** | [Hướng dẫn Search](https://support.discord.com/hc/en-us/articles/115000468588-How-to-Use-Search-on-Discord) | Tìm lại tin theo từ khóa, người gửi, kênh và thời gian | Có sẵn trên mọi client; hỗ trợ nhiều bộ lọc (from, in, has, before/after) | Cần kiểm tra người học có biết dùng cú pháp tìm kiếm và có nhớ từ khóa phù hợp không | Đo hiệu quả tìm kiếm sẵn có trước khi đề xuất công cụ mới |
+| **Pinned Messages** | [Hướng dẫn ghim tin](https://support.discord.com/hc/en-us/articles/221421867-Pin-Messages-FAQ) | Truy cập lại các thông báo quan trọng đã được ghim | Giữ tin dễ truy cập ở đầu kênh, cho phép nhảy thẳng về tin gốc | Cần người có quyền Admin/Mod ghim; cần quy trình gỡ bỏ các thông báo đã hết hạn | Kiểm tra xem việc ghim và cập nhật tin thường xuyên có đủ giải quyết pain chưa |
+| **Announcement Channels** | [Hướng dẫn kênh thông báo](https://support.discord.com/hc/en-us/articles/360032008192-Announcement-Channel-FAQ) | Tập trung và phát hành thông báo một chiều | Hỗ trợ đăng thông báo không bị trôi bởi tin chat, cho phép theo dõi kênh | Cần bật tính năng Community Server; hiệu quả ở lớp vẫn phụ thuộc vào cách tổ chức và ý thức người đăng | Thử cách tổ chức thông báo rõ ràng trước khi tăng độ phức tạp công nghệ |
+
+*Ghi chú:* Các tính năng trên được xác nhận từ tài liệu chính thức của Discord; những khoảng trống trong bảng là điều nhóm cần kiểm tra tại lớp, chưa phải hạn chế đã được chứng minh.
+
+**Kết luận research:**
+
+```text
+Discord đã có sẵn các tính năng tìm kiếm, ghim tin và kênh thông báo. Vì vậy, nhóm chưa có đủ căn cứ kết luận là cần AI. 
+Bước tiếp theo là quan sát cách học viên sử dụng các tính năng này và xác định phần khó khăn còn lại. Nếu cách tổ chức lại kênh hoặc hướng dẫn dùng tìm kiếm có sẵn đáp ứng được mục tiêu, nhóm ưu tiên phương án đơn giản đó.
+```
 
 ---
 
@@ -135,39 +157,53 @@ Tổng hợp:
 
 ### 4.1. Quy trình hiện tại
 
-Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
+Sơ đồ (ASCII):
 
 ```text
+HIỆN TẠI — 5 bước, ~15 phút/ngày, 5/5 bước thủ công
 
+[1. Mở Discord & vào kênh lớp: 1']
+→ [2. Cuộn lên tìm vị trí tin chưa đọc: 2']
+→ [3. Đọc lướt hàng trăm tin chat để lọc thông báo quan trọng: 10'] ← BOTTLENECK (tin trôi, dễ sót)
+→ [4. Đối chiếu tin nhắn xem có phải bản cập nhật mới nhất không: 1']
+→ [5. Tự ghi chú deadline / đổi lịch vào sổ hoặc lịch cá nhân: 1']
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Học viên | Thông báo ứng dụng Discord | Đã vào đúng kênh chat lớp học | ~1 phút / mỗi ngày | Thường làm vào cuối ngày hoặc sáng trước giờ học |
+| 2 | Học viên | Hàng trăm tin nhắn mới tích lũy | Điểm bắt đầu đọc (tin chưa đọc gần nhất) | ~2 phút / mỗi ngày | Dễ bị trượt tay cuộn quá hoặc nản vì quá nhiều tin |
+| 3 | Học viên | Dòng tin nhắn thảo luận hỗn tạp | Nhận diện tin có chứa deadline, đổi lịch | ~10 phút / mỗi ngày | **BOTTLENECK CHÍNH:** Tin quan trọng nằm lẫn trong thảo luận làm bài, spam sticker, meme |
+| 4 | Học viên | Tin thông báo vừa tìm được | Xác định tin này còn hiệu lực hay đã bị sửa đổi | ~1 phút / mỗi ngày | Dễ nhầm nếu mentor đăng đính chính ở tin nhắn sau đó |
+| 5 | Học viên | Nội dung ngày/giờ chính xác | Note cá nhân (Notion, Google Calendar, sổ tay) | ~1 phút / mỗi ngày | Nhập thủ công, có nguy cơ nhập sai múi giờ hoặc gõ nhầm |
 
-**Bottleneck chính:**
+**Bottleneck chính:** Bước 3 — Đọc lướt từng dòng tin nhắn thảo luận để tự nhận diện tin nào là thông báo quan trọng (hạn nộp, đổi lịch). Mất khoảng 10–12 phút/ngày vì thông báo bị trôi nhanh giữa hàng trăm tin chat thường ngày, gây mệt mỏi và rủi ro bỏ sót cao.
 
 ### 4.2. Quy trình tương lai
 
 Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
 
 ```text
+TƯƠNG LAI — 4 bước, ~2.5 phút/ngày, 1/4 bước thủ công
 
+[1. Lọc tin nhắn từ người có thẩm quyền / kênh thông báo: 10s]   ← RULE (webhook/bot filter theo Role/Channel)
+→ [2. Trích xuất hạn nộp, môn học, tóm tắt 1 câu kèm link gốc: 20s] ← AI (LLM trích xuất thực thể & tóm tắt)
+→ [3. Hiển thị bảng tổng hợp thông báo mới trong ngày: 10s]         ← RULE (giao diện dashboard / bot digest)
+→ [4. Học viên đọc tóm tắt, bấm link kiểm tra tin gốc & lưu lịch: 2'] ← CON NGƯỜI (HITL)
+
+BOUNDARY: AI không tự ý thêm lịch vào Calendar của học viên; AI không suy đoán deadline nếu tin nhắn không ghi rõ ngày giờ; bắt buộc luôn hiển thị link dẫn tới tin nhắn Discord gốc.
+PHƯƠNG ÁN QUAY VỀ: Nếu bot gặp sự cố hoặc bản tóm tắt AI thiếu thông tin, học viên dùng tính năng ghim tin (Pinned Messages) và kênh #announcement hoặc tìm kiếm theo cú pháp có sẵn.
 ```
 
 ### 4.3. Before / after
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước | 5 bước | 4 bước | Tự động hóa khâu gom tin và trích xuất |
+| Tổng thời gian | ~15 phút/ngày | ~2.5 phút/ngày | Giảm hơn 80% thời gian tìm kiếm tin |
+| Số bước thủ công | 5/5 bước | 1/4 bước (bước 4) | Con người chỉ đọc bản tóm tắt và kiểm chứng tin gốc |
+| Bottleneck chính | Đọc lướt hàng trăm tin chat | Học viên kiểm tra tin gốc (kiểm soát an toàn) | Chuyển điểm nghẽn sang khâu xác nhận chất lượng (HITL) |
+| Rủi ro mới phát sinh | — | AI trích xuất sai ngày giờ, bỏ sót thông báo viết ngầm | Khắc phục bằng boundary và bắt buộc đính kèm link tin gốc |
 
 ---
 
@@ -175,16 +211,19 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Học viên tham gia học tập và làm bài tập trên kênh Discord chung của lớp (~40 học viên). |
+| **Quy trình** | Hằng ngày mở Discord → cuộn tìm tin chưa đọc → đọc lướt qua hàng trăm tin chat thảo luận để lọc thông báo quan trọng → đối chiếu cập nhật mới nhất → ghi chú deadline vào lịch cá nhân. |
+| **Bottleneck** | Khâu đọc lướt hàng trăm tin nhắn thảo luận để nhận ra thông báo hạn nộp hoặc đổi lịch (mất ~10–12 phút/ngày) vì tin nhắn quan trọng dễ bị trôi nhanh và lẫn lộn giữa tin chat thường nhật. |
+| **Impact** | Mỗi học viên mất ~15 phút/ngày (~75 phút/tuần); từng xảy ra trường hợp học viên bỏ sót thông báo đổi lịch học hoặc nộp muộn bài tập; tạo tâm lý bất an, phải hỏi đi hỏi lại bạn cùng lớp. |
+| **Success Metric** (baseline → target, cách đo) | **Baseline:** Mất ~15 phút/ngày để tìm và xử lý thông báo (ước lượng của Trường trong CP1–CP2); tỷ lệ bỏ sót thông báo quan trọng ~1 lần/tháng. <br>**Target:** Giảm thời gian tìm và nhận biết thông báo xuống dưới 3 phút/ngày; số thông báo quan trọng bị bỏ sót giảm về 0. <br>**Cách đo:** 3–5 học viên tự bấm giờ liên tục trong 1 tuần pilot; đếm số lần phản ánh bỏ sót hoặc nộp trễ deadline. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | - AI **không được** tự động thêm hoặc sửa sự kiện lịch cá nhân khi người dùng chưa xác nhận. <br>- AI **không được** suy đoán hoặc tự bịa ra hạn nộp nếu tin nhắn không nêu rõ ngày giờ cụ thể. <br>- AI **bắt buộc** phải dẫn link kèm trích dẫn nguyên văn tin nhắn gốc trên Discord để học viên bấm vào kiểm tra lại (Human-in-the-Loop) trước khi quyết định hành động. |
 
 Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
 
--
+- **Phản biện 1 (từ AI):** Baseline 15 phút/ngày và tần suất sót 1 lần/tháng mới chỉ là ước lượng chủ quan của 1 học viên (Trường), chưa có số liệu đo đạc thực tế của các bạn khác trong lớp.
+  - *Nhóm đồng ý:* Nhóm xác định rõ con số 15 phút là giả thuyết ban đầu (đã ghi trong Assumption Map CP4) và sẽ tổ chức bấm giờ thực tế cho 3-5 học viên ở giai đoạn pilot để có baseline chuẩn xác.
+- **Phản biện 2 (từ Phụng & Thanh):** Nếu giảng viên/mentor chỉ cần đăng thông báo vào kênh `#announcement` và khóa chat thì học viên có còn mất 15 phút không? Cần phân định rõ vấn đề do thói quen tổ chức kênh hay do công cụ.
+  - *Nhóm đồng ý một phần:* Dù có kênh `#announcement`, thực tế trợ giảng và học viên vẫn thảo luận về việc gia hạn, dời lịch ngay trong thread bài học. Quy trình mới cần kết hợp cả quy ước kênh (No AI/Rule) trước khi phụ thuộc hoàn toàn vào AI.
 
 ---
 
@@ -192,38 +231,45 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:
+Bài của nhóm nằm ở ô: **Độ mơ hồ Trung bình — Độ phức tạp Thấp đến Trung bình** (Ô phù hợp cho **Workflow** kết hợp Rule).
 
 Vì sao:
+- **Độ mơ hồ (Ambiguity): Trung bình.** Thông báo trên Discord được viết bằng ngôn ngữ tự nhiên tự do, không theo khuôn mẫu cố định (ví dụ: *"mai dời sang chiều nhé"*, *"hạn chót lab 2 đẩy sang 23h59 Chủ nhật"*, *"thông báo nộp bổ sung"*), đôi khi xen lẫn tiếng lóng hoặc ngữ cảnh ngầm của lớp học. Do đó, các bộ lọc từ khóa đơn giản (Rule) dễ bị bỏ sót hoặc nhận diện sai. Tuy nhiên, kết quả mong muốn đầu ra lại rất cụ thể và có cấu trúc: loại sự kiện, môn học, thời hạn và tóm tắt ngắn.
+- **Độ phức tạp (Complexity): Thấp đến Trung bình.** Quy trình xử lý tuần tự gồm các bước xác định trước: nhận tin nhắn qua Discord API → lọc người gửi → trích xuất thông tin/tóm tắt → hiển thị digest → học viên đối chiếu tin gốc. Không đòi hỏi hệ thống tự lập kế hoạch nhiều bước (multi-step planning) hay tự hành động ra ngoài môi trường mà chỉ cần một luồng xử lý cố định có người kiểm soát.
 
 ### 6.2. So sánh 4 mức
 
 | Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| **No AI** (sửa quy trình) | Thống nhất quy ước: Mọi deadline/đổi lịch bắt buộc đăng ở kênh `#announcement`, ghim tin quan trọng và gỡ ghim khi hết hạn. | Giảng viên, trợ giảng và ban cán sự lớp tuân thủ 100% quy ước đăng tin tập trung và dọn dẹp tin ghim đều đặn. | Rất khó duy trì kỷ luật; các trao đổi dời lịch đột xuất trong kênh chat thảo luận chung vẫn bị trôi. | Dự phòng nền tảng |
+| **Rule** | Tạo Discord bot lọc tin nhắn theo từ khóa cố định (`deadline`, `hạn nộp`, `dời lịch`, `hoãn`, `nộp bài`) của người có vai trò Admin/Mentor. | Người đăng thông báo luôn sử dụng đúng các từ khóa quy định trong danh sách từ điển của bot. | **Báo nhầm:** câu hỏi thảo luận của học viên có chứa từ khóa bị bắt nhầm. **Bỏ sót:** giảng viên dùng cách nói tự nhiên (*"trưa mai nộp nhé"*, *"dời sang tuần sau"*) không khớp từ khóa. | Dùng làm bộ lọc thô tầng 1 |
+| **Workflow** | **Rule** lọc tin theo Role người gửi + kênh → **AI** phân tích ngữ cảnh ngôn ngữ tự nhiên để xác định tính xác thực của thông báo, trích xuất hạn chót/lịch học kèm tóm tắt 1 câu → Bot gửi digest định kỳ kèm link tin gốc → **Con người (HITL)** bấm link gốc kiểm tra lại. | Khi muốn bắt trọn các thông báo viết tự do nhưng vẫn giữ luồng kiểm duyệt an toàn, không để AI tự quyết định thay con người. | Chi phí gọi API LLM (dù rất nhỏ); rủi ro AI ảo giác trích xuất sai ngày giờ nếu prompt không chặt chẽ (được chặn bằng link gốc). | **CHỌN (nếu bước kiểm chứng yêu cầu)** |
+| **Agent** | Agent tự do đọc toàn bộ server, tự tương tác hỏi lại giảng viên khi thông báo chưa rõ, tự động điền vào Google Calendar cá nhân của từng học viên và tự nộp bài thay khi đến hạn. | Khi bài toán đòi hỏi hệ thống phải tự chủ ra quyết định mà không cần học viên can thiệp ở bất kỳ khâu nào. | Rủi ro vượt quyền cực lớn; bảo mật dữ liệu; chi phí cao; nếu agent hiểu sai hạn nộp sẽ dẫn đến nộp bài hỏng hoặc bỏ lỡ deadline mà học viên không hề hay biết. | **LOẠI BỎ** |
 
-**Mức chọn:**
+**Mức chọn:** **Workflow (Kết hợp Rule + AI trích xuất + Con người kiểm duyệt)** nếu cần giải pháp công nghệ; nhưng ưu tiên thử nghiệm **Rule + No AI** trước theo kết luận nghiên cứu.
 
 **Vì sao không chọn mức đơn giản hơn:**
+Nếu chỉ dùng **No AI** (quy ước kênh), kinh nghiệm thực tế cho thấy rất khó ép 100% người dạy và học viên tuân thủ nghiêm ngặt, nhất là trong các kỳ đồ án gấp rút khi thông báo dời lịch thường phát sinh ngay giữa thread chat. Nếu chỉ dùng **Rule** (keyword search), tỷ lệ bỏ sót (false negative) quá cao do sự phong phú của tiếng Việt và ngữ cảnh hội thoại, mà trong môi trường học tập thì bỏ sót deadline gây thiệt hại nặng nề hơn rất nhiều.
 
 ### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| **Prediction** — AI dự đoán / tạo ra gì? | Dự đoán xem tin nhắn có chứa thông báo thời hạn/đổi lịch hợp lệ hay không; trích xuất thực thể có cấu trúc: *Môn học, Loại sự kiện, Thời gian cụ thể (chuẩn hóa sang giờ GMT+7)* và tạo bản tóm tắt 1 câu súc tích. |
+| **Judgment** — con người cân nhắc, quyết định gì? | Học viên nhìn vào danh sách tóm tắt, quyết định thông báo này có liên quan đến nhóm/lớp của mình hay không và bấm link gốc để xác nhận tính chính xác trước khi lên kế hoạch. |
+| **Action** — hành động cuối cùng là gì, ai làm? | Học viên tự tay thêm sự kiện vào lịch cá nhân hoặc sắp xếp thời gian làm bài nộp đúng hạn. Hệ thống không tự động can thiệp vào tài khoản hay bài nộp của học viên. |
+| **Outcome** — đo kết quả bằng gì? | Thời gian tìm và xử lý thông báo của học viên giảm từ 15 phút/ngày xuống <3 phút/ngày; số ca trễ hạn do sót tin giảm về 0; tỷ lệ trích xuất chính xác thời hạn đạt >95%. |
+| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Nội dung văn bản tin nhắn, timestamp gửi, tên tác giả, role người gửi, tên kênh Discord. Dữ liệu này có sẵn 100% thông qua Discord Gateway API / Bot token. |
+| **Feedback** — lấy phản hồi ở đâu để cải thiện? | Hai nút bấm reaction ngay dưới mỗi tin tóm tắt: 👍 (Trích xuất đúng) / 👎 (Trích xuất sai/báo nhầm). Ghi log lại các trường hợp học viên bấm 👎 để fine-tune prompt trích xuất. |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+- **Người dùng muốn được hỗ trợ (augment) hay giao hẳn việc (automate)? Bằng chứng:**
+  - **Người dùng muốn được hỗ trợ (Augment).** Học viên chỉ cần công cụ gom lại và trích xuất sẵn ngày giờ kèm đường dẫn trực tiếp đến tin nhắn gốc để họ tự kiểm tra và chủ động quản lý lịch của mình.
+  - *Bằng chứng:* Việc ghi nhận lịch học và nộp bài liên quan trực tiếp đến điểm số cá nhân. Không học viên nào muốn giao quyền tự động (automate) hoàn toàn cho một con bot tự xếp lịch hay tự quyết định hạn nộp vì nếu bot sai thì sinh viên là người chịu hậu quả trực tiếp (trừ điểm, trượt môn).
+- **AI sai kiểu nào tệ hơn, báo nhầm hay bỏ sót? Vì sao, và thiết kế đã xử lý thế nào:**
+  - **BỎ SÓT (False Negative) TỆ HƠN NHIỀU.** Nếu AI báo nhầm một tin nhắn thường thành thông báo hạn nộp, học viên chỉ mất 2–3 giây liếc mắt và bỏ qua. Nhưng nếu AI bỏ sót một thông báo dời deadline lên sớm hoặc đổi phòng thi, học viên sẽ bị trễ bài hoặc vắng thi, dẫn đến hậu quả nghiêm trọng về học tập.
+  - *Thiết kế xử lý:* Bộ lọc tầng 1 (Rule) được cấu hình với độ nhạy cao (recall ưu tiên), chấp nhận lấy dư tin nhắn từ tất cả những người có thẩm quyền (Mentor, TA, Ban cán sự). Ở tầng 2 (AI), prompt được chỉ dẫn thiên về thận trọng: nếu nghi ngờ một tin nhắn có khả năng là thông báo, vẫn đưa vào mục *"Thông báo cần chú ý"* kèm trích dẫn nguyên văn thay vì tự ý loại bỏ.
 
 ---
 
@@ -231,29 +277,33 @@ Vì sao:
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Học viên lớp L3A (~40 người) theo dõi thông tin học tập, bài tập trên Discord. |
+| **Quy trình** | Hằng ngày bot lắng nghe tin nhắn từ mentor/kênh chỉ định → AI trích xuất thông tin hạn nộp/đổi lịch → đăng bản digest tóm tắt 1 câu kèm link gốc mỗi ngày lúc 18h → học viên đọc tóm tắt, bấm link kiểm tra tin gốc và lưu lịch. |
+| **Bottleneck** | Khâu đọc lướt hàng trăm tin chat thảo luận được giải quyết hoàn toàn bằng việc tự động hóa trích xuất. Điểm nghẽn duy nhất còn lại là thời gian học viên đối chiếu tin gốc (~1–2 phút/ngày để kiểm soát an toàn). |
+| **Impact** | Tiết kiệm ~12–13 phút/ngày cho mỗi học viên (~60–65 phút/tuần); loại bỏ rủi ro bỏ sót deadline hoặc trễ hạn; giải tỏa căng thẳng tâm lý theo dõi tin trôi. |
+| **Success Metric** (baseline → target, cách đo) | - **Thời gian tìm/nhận biết:** từ 15 phút/ngày (ước lượng) xuống dưới 3 phút/ngày (đo bằng bấm giờ trong 1 tuần pilot). <br>- **Tỷ lệ bỏ sót thông báo:** từ ~1 lần/tháng về 0 lần. <br>- **Chất lượng trích xuất AI:** Tỷ lệ trích xuất đúng hạn nộp và đúng môn học đạt ≥95% trên tổng số thông báo được xử lý. |
+| **Boundary** | - AI tuyệt đối không tự sửa hay tạo lịch tự động trên tài khoản cá nhân của học viên. <br>- AI không suy đoán ngày giờ khi tin nhắn gốc viết mơ hồ; trong trường hợp đó phải gắn nhãn *"Cần xác nhận lại với người gửi"*. <br>- Bắt buộc 100% bản tóm tắt phải đính kèm URL dẫn thẳng đến tin nhắn Discord gốc (HITL). |
+| **AI intervention point** | Bước 2 trong quy trình: Nhận diện ngữ cảnh và trích xuất thông tin có cấu trúc (Môn học, Hành động, Thời hạn ISO, Tóm tắt 1 câu) từ tin nhắn văn bản tự nhiên. |
+| **Mức chọn** | **Workflow** (Rule lọc người gửi/kênh → AI trích xuất thực thể & tóm tắt → Bot gửi thông báo → Con người kiểm tra tin gốc). |
+| **Rủi ro & người kiểm tra** | Rủi ro AI trích xuất nhầm ngày/giờ hoặc hiểu sai thông báo đính chính. Người kiểm tra: Học viên trực tiếp kiểm tra bằng cách bấm vào link tin gốc trước khi note lịch (Human-in-the-Loop). |
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| **Quy trình** | Quy trình thủ công học viên tự mở Discord cuộn tin | Quy trình bán tự động: Bot lắng nghe → AI trích xuất → Học viên kiểm tra | Định hình rõ luồng vận hành công nghệ và vị trí con người kiểm soát |
+| **Success Metric** | Chỉ đo thời gian (15' → 3') và số lần sót | Bổ sung thêm metric chất lượng trích xuất của AI (độ chính xác ≥95%) | Phản biện nhận được chỉ ra rằng nhanh hơn nhưng trích xuất sai ngày thì còn nguy hiểm hơn đọc tay |
+| **AI intervention point** | Chưa xác định rõ ràng vị trí can thiệp | Xác định can thiệp tại bước trích xuất thực thể và tóm tắt thông báo | Đảm bảo tính minh bạch, không dùng AI tràn lan cho toàn bộ chu trình |
+| **Mức chọn** | Chưa chốt mức can thiệp | Chốt mức Workflow | Loại trừ hoàn toàn mức Agent để tránh rủi ro tự ý hành động và chi phí không cần thiết |
 
 **Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | **Tính đầy đủ (No omission)** | Trích xuất đủ 100% các thông báo có chứa hạn nộp hoặc đổi lịch được đăng bởi Mentor/Admin. | Bỏ sót bất kỳ thông báo chính thức nào khiến học viên không nhận được tin. |
+| 2 | **Độ chính xác ngày giờ (Temporal Accuracy)** | Thời gian hạn chót và ngày tháng được quy đổi chính xác theo múi giờ GMT+7 đúng như tin nhắn gốc. | Trích xuất sai ngày, sai giờ, hoặc hiểu nhầm các mốc thời gian tương đối (*"mai"*, *"thứ 5 tuần sau"*). |
+| 3 | **Bảo toàn link gốc (Traceability)** | Mỗi dòng tóm tắt đều có clickable link trỏ chính xác về message ID của tin nhắn Discord gốc. | Thiếu link hoặc link dẫn sai tin nhắn, khiến học viên không thể tự kiểm chứng lại. |
+| 4 | **Tính súc tích (Conciseness)** | Bản tóm tắt không quá 2 câu, nêu bật đúng: Môn học — Việc cần làm — Hạn chót. | Diễn đạt rườm rà, lặp lại toàn văn tin nhắn cũ hoặc đưa thêm bình luận không cần thiết của AI. |
 
 ---
 
@@ -263,31 +313,51 @@ Vì sao:
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **Trung bình** | Trải nghiệm mất thời gian và trôi tin của Trường là thật; tuy nhiên nhóm chưa thực hiện phỏng vấn học viên khác ngoài nhóm ở CP4 để kiểm chứng xem tính năng Ghim tin và kênh `#announcement` có sẵn đã đủ dùng đối với đa số hay chưa. |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | **Thấp** | Đầu ra là một danh sách tin tóm tắt kèm link gốc cực kỳ trực quan, gửi thẳng trong Discord — môi trường học viên đã quen dùng mỗi ngày; thao tác bấm link đối chiếu rất đơn giản. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **Thấp** | Kỹ thuật làm Discord bot lắng nghe tin nhắn và gọi LLM API (Gemini/OpenAI) để trích xuất thực thể theo JSON Schema là hoàn toàn nằm trong tầm tay của nhóm sinh viên CNTT; chi phí API rất nhỏ (vài cent/tháng). |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | **Trung bình** | Cần xin phép Admin server Discord lớp để thêm bot hoặc webhook đọc kênh; nếu server cấm bot bên thứ ba vì bảo mật thì giải pháp không thể triển khai được. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** **Not Yet** (Chưa vội xây dựng giải pháp AI ngay).
 
 **Lý do:**
-
-**Nếu Go — pilot nhỏ nhất:**
+1. **Chưa có đủ bằng chứng thực tế từ người dùng bên ngoài nhóm:** Theo kết quả CP4, nhóm mới chỉ có số liệu mô tả của một cá nhân (Trường) với con số 15 phút/ngày là ước lượng. Nhóm chưa phỏng vấn 2–3 học viên ngoài nhóm để xác thực xem đây có thực sự là nỗi đau chung của cả lớp hay không.
+2. **Chưa kiểm chứng hết các giải pháp sẵn có (No AI / Rule):** Kết luận research mục 3.3 chỉ ra Discord đã có Pinned Messages, Announcement Channels và Search. Nếu lớp chỉ cần chấn chỉnh quy ước đăng bài và dọn dẹp tin ghim định kỳ mà giải quyết được 80% vấn đề, thì việc xây dựng thêm hệ thống AI là lãng phí và phức tạp hóa bài toán.
 
 **Nếu Not Yet — cần kiểm chứng gì trước:**
+1. **Phỏng vấn 3 học viên ngoài nhóm** trong buổi lab tiếp theo theo đúng bộ 6 câu hỏi The Mom Test đã chuẩn bị ở mục 3.2 để kiểm chứng giả định 1, 2, 3.
+2. **Thử nghiệm giải pháp No AI trong 3–5 ngày:** Đề xuất ban cán sự lớp chỉ định kênh thông báo riêng và thực hiện quy tắc ghim tin rõ ràng; bấm giờ đo xem thời gian tìm kiếm của học viên có giảm về dưới 5 phút không.
+3. **Xin phép Admin:** Trao đổi với giảng viên/quản trị viên server về khả năng tích hợp webhook hoặc bot đọc tin.
 
-**Nếu No-Go — nên làm gì thay AI:**
+**Nếu sau đó kiểm chứng xác nhận vẫn nghẽn — pilot nhỏ nhất (Go với Workflow hẹp):**
+- Xây dựng một script Python nhỏ chạy cục bộ (hoặc webhook n8n đơn giản), lắng nghe duy nhất tin nhắn từ Mentor trong kênh `#thao-luan-lab`.
+- Dùng mô hình ngôn ngữ nhẹ để trích xuất và đẩy tóm tắt về một kênh riêng `#daily-digest` cho 5 học viên trong nhóm dùng thử trong 1 tuần.
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+**Ngưỡng dừng (Stop threshold):**
+- Nếu sau 3 ngày thử nghiệm quy ước kênh (No AI) mà thời gian tìm thông báo của học viên giảm xuống **dưới 5 phút/ngày** và **không có ca nào bị sót tin**, nhóm sẽ **DỪNG LẠI Ở GIẢI PHÁP QUY ƯỚC (NO AI)** và không code thêm bot/AI.
+- Nếu triển khai bot Workflow AI thử nghiệm mà sau 1 tuần tỷ lệ học viên phản hồi bấm 👎 (trích xuất sai hoặc báo nhầm) **vượt quá 15%**, nhóm sẽ **DỪNG BOT NGAY LẬP TỨC** và quay về sử dụng phương án ghim tin thủ công.
 
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+- **Hạn chế lớn nhất:** Dữ liệu baseline (15 phút/ngày, sót 1 lần/tháng) hoàn toàn dựa trên ước lượng và trải nghiệm cá nhân của thành viên trong nhóm, chưa có dữ liệu đo lường bấm giờ thực nghiệm khách quan từ tập người dùng lớn hơn.
+- **Rủi ro phụ thuộc nền tảng:** Phụ thuộc vào chính sách cấp quyền bot của Discord API và quy định bảo mật riêng của từng server trường học/tổ chức.
+- **Hướng tiếp theo:** 
+  1. Tiến hành phỏng vấn thực tế 3 bạn học viên khác trong lớp theo bảng câu hỏi đã soạn sẵn.
+  2. Đo đạc baseline thời gian thật bằng cách tự bấm giờ trong 3 ngày liên tiếp.
+  3. Thử nghiệm áp dụng quy tắc định dạng thông báo (`[DEADLINE]`, `[ĐỔI LỊCH]`) trước khi bắt tay viết code.
+
+---
 
 ## 10. Tài liệu tham khảo
 
--
+1. **Discord Inc.**, *How to Use Search on Discord*, Discord Support, 2024. [Link](https://support.discord.com/hc/en-us/articles/115000468588-How-to-Use-Search-on-Discord)
+2. **Discord Inc.**, *Pin Messages FAQ*, Discord Support, 2024. [Link](https://support.discord.com/hc/en-us/articles/221421867-Pin-Messages-FAQ)
+3. **Discord Inc.**, *Announcement Channel FAQ*, Discord Support, 2024. [Link](https://support.discord.com/hc/en-us/articles/360032008192-Announcement-Channel-FAQ)
+4. **David Bland & Alexander Osterwalder**, *Testing Business Ideas: A Field Guide for Rapid Experimentation*, Wiley, 2019 (Tham khảo framework Assumption Mapping).
+5. **Rob Fitzpatrick**, *The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you*, 2013 (Tham khảo kỹ thuật phỏng vấn kiểm chứng).
+6. **Google PAIR (People + AI Research)**, *People + AI Guidebook*, Google, 2021. [Link](https://pair.withgoogle.com/guidebook/) (Tham khảo bộ câu hỏi Augment vs Automate, Error Handling và Human-in-the-Loop).
+7. **Jeff Gothelf & Josh Seiden**, *Lean UX: Designing Great Products with Agile Teams*, O'Reilly Media, 2021 (Tham khảo cấu trúc Problem Statement).

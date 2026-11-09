@@ -150,24 +150,24 @@ HIỆN TẠI — 20 phút/lần hỗ trợ
 | Nhận phản biện | Câu hỏi tôi nhận được: *"Nếu bắt điền biểu mẫu nhiều trường thì người dùng có lười rồi vẫn nhắn tin tự do không?"* (Trường hỏi) | Tôi đã sửa gì: Đặt cảm nhận nhanh là Rule (thử biểu mẫu bắt buộc trước), bổ sung giả thuyết AI chỉ hỗ trợ gợi ý trường thiếu khi người dùng gõ tự do |
 | Gom cluster / cây OST | Điều phối và cùng nhóm gom 9 candidate thành 5 cluster (A đến E), dựng cây OST | Thống nhất nhóm bài toán "Tìm và chọn thông tin cần thiết" (Cluster A) |
 | Chọn candidate problem | Chấm điểm shortlist 3 candidate (B1, C1, A1) trên 7 tiêu chí | Nhất trí chọn B1 (31/35) vì phạm vi hẹp, dễ tiếp cận học viên để kiểm chứng tại lab |
-| Kiểm chứng / research | Dự kiến phụ trách research giải pháp có sẵn (CP4) | Chưa thực hiện |
-| Quy trình nhóm | Dự kiến hỗ trợ Thanh vẽ quy trình trước/sau (CP5) | Chưa thực hiện |
-| Problem Statement | Dự kiến phản biện bản v0 và v1 | Chưa thực hiện |
-| Mức can thiệp AI | Dự kiến hỗ trợ Trường so sánh 4 mức (CP6) | Chưa thực hiện |
-| Quyết định | Dự kiến tổng hợp 4 rủi ro và kết luận Go/Not Yet/No-Go (CP6) | Chưa thực hiện |
+| Kiểm chứng / research | Phụ trách research giải pháp có sẵn: tra cứu tài liệu chính thức của Discord về Search, Pin và Announcement Channels (CP4) | Đưa ra bảng so sánh công cụ, nhận diện khoảng trống và kết luận chưa cần vội dùng AI ở mục 3.3 group_report.md |
+| Quy trình nhóm | Cùng Thanh và Trường xây dựng quy trình trước/sau; làm rõ bottleneck bước đọc lướt tin nhắn và quy định boundary đính kèm link gốc (CP5) | Hoàn thiện sơ đồ 5 bước hiện tại và 4 bước tương lai có gắn nhãn Rule, AI, HITL |
+| Problem Statement | Phản biện bản v0 và đóng góp xây dựng bản v1 (CP5–CP6) | Bổ sung thêm metric chất lượng trích xuất (độ chính xác ≥95%) vào v1 thay vì chỉ đo tốc độ |
+| Mức can thiệp AI | Hỗ trợ Trường so sánh 4 mức can thiệp; trả lời 2 câu hỏi Google PAIR (CP6) | Thống nhất chọn Workflow có kiểm duyệt, kiên quyết loại bỏ mức Agent |
+| Quyết định | Cùng nhóm đánh giá 4 rủi ro, bảo vệ quan điểm chọn kết luận "Not Yet" và thiết lập 2 ngưỡng dừng (CP6) | Nhóm thống nhất không vội vàng làm AI khi chưa có phỏng vấn ngoài nhóm và chưa thử No AI |
 
 ---
 
 ## 5. Dùng AI
 
-| Checkpoint                     | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
-| ------------------------------ | ---------------------- | ----------------- | -------------------------- | ----------------------------------- |
-| CP1 Scan                       |                        |                   |                            |                                     |
-| CP2 Problem Card               |                        |                   |                            |                                     |
-| CP4 Research                   |                        |                   |                            |                                     |
-| CP5 Quy trình                  |                        |                   |                            |                                     |
-| CP5–6 Problem Statement        |                        |                   |                            |                                     |
-| CP6 Mức can thiệp / quyết định |                        |                   |                            |                                     |
+| Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
+|---|---|---|---|---|
+| CP1 Scan | Gợi ý thêm các vấn đề xoay quanh công việc IT | Mở rộng góc nhìn về các thao tác lặp lại | Gợi ý làm "AI chatbot toàn năng" (solution trá hình) | Loại bỏ giải pháp trá hình, giữ lại problem thật về tổng hợp ticket và tài liệu |
+| CP2 Problem Card | Đóng vai "PM hoài nghi" phản biện card #1 | Chỉ ra ranh giới giữa thời gian làm thật và thời gian chờ ngắt quãng | Thúc ép nhảy sang giải pháp AI quá sớm | Đổi cảm nhận nhanh thành "Rule" (thử form bắt buộc trước) |
+| CP4 Research | Hỗ trợ cấu trúc bảng research và đối chiếu tính năng Discord | Tổng hợp nhanh các tính năng sẵn có | Chưa nêu điều kiện cần bật Community Server cho Announcement | Tự tra cứu lại tài liệu chính thức của Discord để bổ sung rủi ro/điều kiện thực tế |
+| CP5 Quy trình | Chuyển đổi mô tả các bước sang sơ đồ ASCII | Định dạng các khối quy trình trực quan, nhanh gọn | AI tự ý gộp bước đọc tin và bước lưu lịch làm một, làm mờ bottleneck | Tách riêng bước đọc lướt lọc tin để làm rõ điểm nghẽn chính |
+| CP5–6 Problem Statement | Phản biện các trường nội dung trong Problem Statement v0 | Nhắc nhở thiếu metric chất lượng (chỉ đo thời gian) | Gợi ý giao toàn quyền cho bot tự động ghi vào lịch | Giữ vững boundary con người kiểm duyệt (HITL) và thêm tiêu chí trích xuất chính xác ≥95% |
+| CP6 Mức can thiệp / quyết định | So sánh các phương án trên ma trận Ambiguity × Complexity | Cung cấp góc nhìn phân định giữa Workflow và Agent | Nghiêng về việc chọn "Go" làm AI ngay để hoàn thành đồ án | Tự đưa ra quyết định "Not Yet" vì tôn trọng dữ liệu CP4 chưa phỏng vấn ngoài nhóm và kết luận research |
 
 ---
 
@@ -193,4 +193,10 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 ## 7. Tài liệu tham khảo
 
--
+1. **Discord Inc.**, *How to Use Search on Discord*, Discord Support, 2024. [Link](https://support.discord.com/hc/en-us/articles/115000468588-How-to-Use-Search-on-Discord)
+2. **Discord Inc.**, *Pin Messages FAQ*, Discord Support, 2024. [Link](https://support.discord.com/hc/en-us/articles/221421867-Pin-Messages-FAQ)
+3. **Discord Inc.**, *Announcement Channel FAQ*, Discord Support, 2024. [Link](https://support.discord.com/hc/en-us/articles/360032008192-Announcement-Channel-FAQ)
+4. **David Bland & Alexander Osterwalder**, *Testing Business Ideas: A Field Guide for Rapid Experimentation*, Wiley, 2019.
+5. **Rob Fitzpatrick**, *The Mom Test*, 2013.
+6. **Google PAIR**, *People + AI Guidebook*, Google, 2021. [Link](https://pair.withgoogle.com/guidebook/)
+7. **Jeff Gothelf & Josh Seiden**, *Lean UX*, O'Reilly Media, 2021.
