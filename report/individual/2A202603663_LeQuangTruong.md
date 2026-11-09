@@ -60,8 +60,7 @@ Quy trình nháp hiện tại:
 
 ```text
 [Mở Discord] -> [Cuộn tới chỗ chưa đọc] -> [Đọc lướt từng tin] -> [Tự nhận ra tin quan trọng] -> [Ghi vào lịch/ghi chú] -> [Đọc tiếp]
-
-                                              NGHẼN: ~15 phút/ngày, dễ sót
+NGHẼN: ~15 phút/ngày, dễ sót
 ```
 
 ### Problem Card #2
@@ -83,8 +82,7 @@ Quy trình nháp hiện tại:
 
 ```text
 [Đọc lịch/đề] -> [Xác định sáng hay chiều/tối] -> [Tính giờ nộp GMT+7] -> [Mở Calendar] -> [Tạo sự kiện thủ công] -> [Đặt nhắc]
-                                                  ^^^^^^^^^^^^^^^^^^^^^^   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                                                  NGHẼN: ~5 phút/buổi, dễ nhầm giờ
+NGHẼN: ~5 phút/buổi, dễ nhầm giờ
 ```
 
 ### Problem Card #3
@@ -106,8 +104,7 @@ Quy trình nháp hiện tại:
 
 ```text
 [Sửa file] -> [add/commit] -> [push bị từ chối] -> [pull] -> [Thấy dấu conflict] -> [Gỡ tay] -> [Commit lại và push]
-
-                                                                NGHẼN: ~10 phút/lần, ~2 lần/buổi
+NGHẼN: ~10 phút/lần, ~2 lần/buổi
 ```
 
 ### Card muốn pitch nhất
