@@ -77,7 +77,7 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 **Xử lý bất đồng (nếu có):**
 - Điểm “nhóm hiểu domain” ở cả 3 dòng hiện là ước tính ban đầu của nhóm, cần được điều chỉnh lại sau khi kiểm chứng thực tế với người dùng.
-- Nhóm thống nhất: B1 có bằng chứng mới ở mức mô tả trong báo cáo (thời gian 15 phút/ngày chưa đo thực tế, chưa thể coi cả lớp đều gặp vấn đề). Nhóm quyết định đưa giả định này vào CP4 để phỏng vấn/khảo sát các bạn học viên khác trong lớp nhằm xác thực mức độ đau thật sự trước khi bước vào thiết kế giải pháp.
+- Nhóm thống nhất: B1 có bằng chứng ban đầu từ trải nghiệm của Trường; thời gian 15 phút/ngày chưa được đo và chưa thể coi là đại diện cho cả lớp. Sang CP4, nhóm phỏng vấn 2 học viên ngoài nhóm để kiểm tra cách tìm thông báo và những trường hợp bỏ sót/hiểu nhầm. Kết quả còn sơ bộ do mẫu nhỏ và thời gian đều là ước lượng.
 
 ---
 
@@ -100,39 +100,44 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 ### 3.2. Kiểm chứng
 
-**Cách làm phù hợp nhất:** Phỏng vấn nhanh 2–3 học viên ngoài nhóm (mỗi người khoảng 5 phút, không cần hỏi cả lớp). Sử dụng các câu hỏi gợi nhớ về sự việc đã diễn ra trong thực tế:
-- *Lần gần nhất bạn tìm một thông báo hạn nộp hoặc đổi lịch trên Discord là khi nào?*
-- *Bạn đã tìm bằng cách nào? Có thể mô tả hoặc thao tác lại không?*
-- *Bạn mất khoảng bao lâu? Con số đó được đo hay ước lượng?*
-- *Gần đây có lần nào bạn bỏ sót hoặc hiểu nhầm thông báo không? Hậu quả là gì?*
-- *Bạn đã dùng ghim tin, kênh thông báo hoặc tìm kiếm chưa? Lần gần nhất dùng có tìm được không?*
-- *Có trường hợp nào bạn tìm rất nhanh, không gặp khó khăn không? Vì sao?*
+**Cách làm:** Nhóm phỏng vấn nhanh 2 học viên ngoài nhóm bằng câu hỏi gợi nhớ về sự việc đã xảy ra: lần gần nhất cần tìm thông báo, các bước tìm, thời gian và cách đo, trường hợp bỏ sót/hiểu nhầm, trải nghiệm với Search/ghim/kênh thông báo, và lần tìm nhanh không gặp khó khăn. Tên được thay bằng mã P1/P2. Ngày và hình thức phỏng vấn chưa có trong ghi chép, cần bổ sung nếu còn nhớ.
 
-**Trạng thái ghi nhận hiện tại:**
-> Nhóm chưa thực hiện phỏng vấn hoặc survey ngoài nhóm. Hiện có mô tả trải nghiệm của Trường trong CP2; thời gian 15 phút/ngày là ước lượng, chưa phải baseline đã đo và chưa đại diện cho cả lớp.
+#### Interview Snapshot P1
 
-Interview snapshot (mẫu ghi nhận thông tin cần thu thập khi phỏng vấn):
-
-| Trường | Nội dung cần ghi từ buổi phỏng vấn |
+| Trường | Ghi nhận |
 |---|---|
-| Người được hỏi | Vai trò, lớp hoặc bối cảnh liên quan (không ghi tên thật) |
-| Thời điểm và cách hỏi | Ngày, giờ; phỏng vấn trực tiếp hoặc gọi điện |
-| Câu nói đáng nhớ nhất | Nguyên văn câu trả lời thực tế của người được hỏi |
-| Lần gần nhất gặp vấn đề | Thông báo cần tìm, cách tìm và kết quả thực tế |
-| Workaround hiện tại | Ghim tin, tìm kiếm, hỏi bạn bè, tự ghi chú... |
-| Mất bao lâu, bao lần? | Số liệu thực tế (phân biệt rõ giữa đo trực tiếp và ước lượng) |
-| Insight / opportunity rút ra | Nhận định rút ra kèm giới hạn của bằng chứng |
+| Người được hỏi | P1 — học viên ngoài nhóm, dùng Discord lớp |
+| Thời điểm và cách hỏi | Ngày/hình thức phỏng vấn chưa được ghi lại. Sự việc gần nhất được kể: tối thứ Năm tuần trước. |
+| Lần gần nhất gặp vấn đề | P1 tìm hạn nộp bài cá nhân: mở kênh thông báo, thấy tin cũ, chuyển sang kênh học tập, kéo tìm nhưng không thấy, rồi hỏi bạn cùng lớp và mở tin gốc qua link được gửi. |
+| Mất bao lâu, bao lần? | Khoảng 5 phút tự tìm và chờ bạn trả lời thêm vài phút; P1 ước lượng, không bấm giờ. |
+| Kết quả / workaround | Tìm được hạn tối thứ Sáu, chụp phần hạn nộp và đặt nhắc trên điện thoại. Từng bỏ sót yêu cầu nộp link sản phẩm khi đọc lướt trên điện thoại và bổ sung sau khi được nhắc. |
+| Công cụ có sẵn / tín hiệu phản bác | Tìm “record” không ra, đổi sang “ghi hình” thì tìm được. Tin mới, tiêu đề và giờ rõ trong kênh thông báo được tìm nhanh. P1 chưa dùng ghim tin. |
+| Câu nói đáng nhớ | “Khoảng 5 phút tự tìm, rồi đợi bạn trả lời thêm vài phút nữa.” |
+| Insight / giới hạn | Việc chuyển kênh và phụ thuộc vào link từ bạn làm tăng thời gian tìm trong lần này; một trường hợp chưa đủ để kết luận đây là pattern chung. |
 
-Tổng hợp:
+#### Interview Snapshot P2
+
+| Trường | Ghi nhận |
+|---|---|
+| Người được hỏi | P2 — học viên ngoài nhóm, dùng Discord lớp |
+| Thời điểm và cách hỏi | Ngày/hình thức phỏng vấn chưa được ghi lại. Sự việc gần nhất được kể: chiều thứ Bảy vừa rồi. |
+| Lần gần nhất gặp vấn đề | P2 tìm giờ học Chủ nhật trên điện thoại bằng Search với từ “Chủ nhật”, mở nhầm lịch tuần trước, rồi xem ngày đăng và mở tin tuần này. P2 đọc thêm vì tin đề cập lịch của hai lớp. |
+| Mất bao lâu, bao lần? | Khoảng 3–4 phút; P2 ước lượng, không bấm giờ. |
+| Kết quả / workaround | Tìm được giờ học 14:00, thêm vào lịch điện thoại và gửi link tin cho bạn cùng lớp. Từng lưu ảnh của thông báo cũ và không nhận ra hạn nộp đã được sửa trong tin nhắn; biết tin gia hạn qua bạn vào hôm sau. |
+| Công cụ có sẵn / tín hiệu phản bác | Search và kênh thông báo được dùng khi tìm lịch. Ghim tin giúp tìm hướng dẫn nộp bài khi P2 biết tài liệu đã được ghim. Tìm nhanh khi từ khóa trùng với tên bài và hạn nằm ngay đầu tin. |
+| Câu nói đáng nhớ | “Những lần tìm lâu thì thường mình chỉ nhớ nội dung mang máng.” |
+| Insight / giới hạn | Việc nhớ không chính xác từ khóa, phân biệt lịch tuần này với tuần trước và nhận ra bản cập nhật có thể gây khó; P2 cũng tìm nhanh khi nhớ từ khóa chính xác. Đây vẫn là một trường hợp đơn lẻ. |
+
+**Tổng hợp:**
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| Báo cáo cá nhân của Trường — CP2 | 1 người trong nhóm (chưa tính là phỏng vấn CP4) | Có mô tả mất thời gian đọc tin và từng bỏ sót thông báo | Chưa thu thập; chưa biết các tính năng có sẵn đã đủ với học viên khác hay chưa |
-| Phỏng vấn học viên ngoài nhóm | 0 | Chưa có dữ liệu | Chưa có dữ liệu |
+| Báo cáo cá nhân của Trường — CP2 | 1 người trong nhóm, không tính vào phỏng vấn CP4 | Mô tả việc đọc tin và từng bỏ sót thông báo; 15 phút/ngày là ước lượng | Chưa xác nhận mức độ phổ biến ngoài nhóm |
+| Phỏng vấn học viên ngoài nhóm P1/P2 | 2 người | Cả hai kể được lần tìm thông báo mất vài phút theo ước lượng; có ví dụ bỏ sót chi tiết hoặc không nhận ra bản cập nhật | Search, ghim tin và kênh thông báo có ích khi nhớ đúng từ khóa, biết đúng kênh hoặc tin được trình bày rõ |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
 
-Chưa có kết luận sau kiểm chứng. Phạm vi hiện tại tập trung vào việc tìm và nhận biết thông báo hạn nộp, đổi lịch trên Discord; chưa mở rộng sang tổng hợp tài liệu học tập hoặc hướng dẫn IT. Nhóm sẽ điều chỉnh phạm vi, baseline và mục tiêu sau khi có dữ liệu ngoài nhóm. *(Đoạn này cần cập nhật sau khi hoàn thành phỏng vấn; không để trạng thái này rồi coi CP4 đã hoàn thành).*
+Nhóm giữ B1 nhưng làm rõ vấn đề không chỉ là tin nhắn bị trôi: người học có thể phải xác định đúng kênh, từ khóa, lớp áp dụng và bản cập nhật mới nhất; đọc lướt trên điện thoại hoặc lưu ảnh cũ cũng có thể khiến họ bỏ sót chi tiết. Hai cuộc phỏng vấn chưa xác nhận baseline 15 phút/ngày hoặc mức độ phổ biến trong cả lớp vì thời gian đều là ước lượng và mẫu còn nhỏ. Nhóm cần đo baseline thực tế và kiểm tra thêm cách tổ chức thông báo trước khi quyết định triển khai công nghệ.
 
 ### 3.3. Research giải pháp đã có
 
@@ -313,7 +318,7 @@ Nếu chỉ dùng **No AI** (quy ước kênh), kinh nghiệm thực tế cho th
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **Trung bình** | Trải nghiệm mất thời gian và trôi tin của Trường là thật; tuy nhiên nhóm chưa thực hiện phỏng vấn học viên khác ngoài nhóm ở CP4 để kiểm chứng xem tính năng Ghim tin và kênh `#announcement` có sẵn đã đủ dùng đối với đa số hay chưa. |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **Trung bình** | Hai phỏng vấn ngoài nhóm ghi nhận các lần tìm mất vài phút và trường hợp không nhận ra cập nhật; nhưng thời gian đều là ước lượng, mẫu nhỏ, đồng thời Search/ghim/kênh thông báo giúp tìm nhanh trong một số tình huống. Chưa thể kết luận về đa số học viên. |
 | **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | **Thấp** | Đầu ra là một danh sách tin tóm tắt kèm link gốc cực kỳ trực quan, gửi thẳng trong Discord — môi trường học viên đã quen dùng mỗi ngày; thao tác bấm link đối chiếu rất đơn giản. |
 | **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **Thấp** | Kỹ thuật làm Discord bot lắng nghe tin nhắn và gọi LLM API (Gemini/OpenAI) để trích xuất thực thể theo JSON Schema là hoàn toàn nằm trong tầm tay của nhóm sinh viên CNTT; chi phí API rất nhỏ (vài cent/tháng). |
 | **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | **Trung bình** | Cần xin phép Admin server Discord lớp để thêm bot hoặc webhook đọc kênh; nếu server cấm bot bên thứ ba vì bảo mật thì giải pháp không thể triển khai được. |
@@ -323,11 +328,11 @@ Nếu chỉ dùng **No AI** (quy ước kênh), kinh nghiệm thực tế cho th
 **Quyết định:** **Not Yet** (Chưa vội xây dựng giải pháp AI ngay).
 
 **Lý do:**
-1. **Chưa có đủ bằng chứng thực tế từ người dùng bên ngoài nhóm:** Theo kết quả CP4, nhóm mới chỉ có số liệu mô tả của một cá nhân (Trường) với con số 15 phút/ngày là ước lượng. Nhóm chưa phỏng vấn 2–3 học viên ngoài nhóm để xác thực xem đây có thực sự là nỗi đau chung của cả lớp hay không.
+1. **Bằng chứng bên ngoài còn sơ bộ:** Nhóm đã phỏng vấn 2 học viên ngoài nhóm. Cả hai kể được tình huống cụ thể, nhưng thời gian là ước lượng và hai trường hợp chưa đủ xác nhận baseline 15 phút/ngày hoặc mức độ phổ biến trong lớp.
 2. **Chưa kiểm chứng hết các giải pháp sẵn có (No AI / Rule):** Kết luận research mục 3.3 chỉ ra Discord đã có Pinned Messages, Announcement Channels và Search. Nếu lớp chỉ cần chấn chỉnh quy ước đăng bài và dọn dẹp tin ghim định kỳ mà giải quyết được 80% vấn đề, thì việc xây dựng thêm hệ thống AI là lãng phí và phức tạp hóa bài toán.
 
 **Nếu Not Yet — cần kiểm chứng gì trước:**
-1. **Phỏng vấn 3 học viên ngoài nhóm** trong buổi lab tiếp theo theo đúng bộ 6 câu hỏi The Mom Test đã chuẩn bị ở mục 3.2 để kiểm chứng giả định 1, 2, 3.
+1. **Mở rộng kiểm chứng với 1–3 học viên ngoài nhóm nữa** hoặc làm micro-survey 5–10 người. Hai phỏng vấn hiện tại là tín hiệu ban đầu, chưa đủ kết luận cho cả lớp; tập trung kiểm tra giả định 1, 2, 3 trong Assumption Map.
 2. **Thử nghiệm giải pháp No AI trong 3–5 ngày:** Đề xuất ban cán sự lớp chỉ định kênh thông báo riêng và thực hiện quy tắc ghim tin rõ ràng; bấm giờ đo xem thời gian tìm kiếm của học viên có giảm về dưới 5 phút không.
 3. **Xin phép Admin:** Trao đổi với giảng viên/quản trị viên server về khả năng tích hợp webhook hoặc bot đọc tin.
 
@@ -343,10 +348,10 @@ Nếu chỉ dùng **No AI** (quy ước kênh), kinh nghiệm thực tế cho th
 
 ## 9. Hạn chế và hướng tiếp theo
 
-- **Hạn chế lớn nhất:** Dữ liệu baseline (15 phút/ngày, sót 1 lần/tháng) hoàn toàn dựa trên ước lượng và trải nghiệm cá nhân của thành viên trong nhóm, chưa có dữ liệu đo lường bấm giờ thực nghiệm khách quan từ tập người dùng lớn hơn.
+- **Hạn chế lớn nhất:** Baseline 15 phút/ngày và tần suất sót tin khoảng 1 lần/tháng vẫn là ước lượng ban đầu của thành viên trong nhóm; hai phỏng vấn ngoài nhóm cũng chỉ có thời gian tự ước lượng, chưa có dữ liệu bấm giờ từ tập người dùng lớn hơn.
 - **Rủi ro phụ thuộc nền tảng:** Phụ thuộc vào chính sách cấp quyền bot của Discord API và quy định bảo mật riêng của từng server trường học/tổ chức.
 - **Hướng tiếp theo:** 
-  1. Tiến hành phỏng vấn thực tế 3 bạn học viên khác trong lớp theo bảng câu hỏi đã soạn sẵn.
+  1. Mở rộng phỏng vấn thêm 1–3 học viên ngoài nhóm hoặc khảo sát 5–10 người để xem các pattern trong hai snapshot có lặp lại không.
   2. Đo đạc baseline thời gian thật bằng cách tự bấm giờ trong 3 ngày liên tiếp.
   3. Thử nghiệm áp dụng quy tắc định dạng thông báo (`[DEADLINE]`, `[ĐỔI LỊCH]`) trước khi bắt tay viết code.
 
