@@ -10,11 +10,11 @@
 
 ## Thành viên
 
-| STT | Họ và tên | MSSV | Vai trò dự kiến trong bài lab | Tài khoản GitHub |
-|---:|---|---|---|---|
-| 1 | Lê Minh Phụng | 2A202603693 | Điều phối, tổng hợp báo cáo và research giải pháp | Chưa xác minh |
-| 2 | LÊ QUANG TRƯỜNG | 2A202603663 | Kiểm chứng người dùng và tổng hợp bằng chứng | Chưa xác minh |
-| 3 | Mai Văn Thanh | 2A202603696 | Vẽ quy trình, rà soát metric và tổng hợp Problem Statement | Chưa xác minh |
+| STT | Họ và tên       | MSSV        | Vai trò dự kiến trong bài lab                              | Tài khoản GitHub |
+| --: | --------------- | ----------- | ---------------------------------------------------------- | ---------------- |
+|   1 | Lê Minh Phụng   | 2A202603693 | Điều phối, tổng hợp báo cáo và research giải pháp          | okuminhphen      |
+|   2 | Lê Quang Trường | 2A202603663 | Kiểm chứng người dùng và tổng hợp bằng chứng               | Letruong238      |
+|   3 | Mai Văn Thanh   | 2A202603696 | Vẽ quy trình, rà soát metric và tổng hợp Problem Statement | MaiVanThanhDev   |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
@@ -22,15 +22,15 @@ Không ghi email hay số điện thoại vào bảng này, vì repo có thể �
 
 Đây là kế hoạch phân công, không phải xác nhận đã hoàn thành.
 
-| Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
-|---|---|---|---|
-| CP3 — Hội tụ nhóm | Lê Minh Phụng | Lê Quang Trường, Mai Văn Thanh | Bảng pitch, cluster, cây OST, bảng chấm điểm và lý do chọn candidate |
-| CP4 — Kiểm chứng | Lê Quang Trường | Lê Minh Phụng, Mai Văn Thanh | Assumption map, ghi chép phỏng vấn hoặc kết quả survey |
-| CP4 — Research | Lê Minh Phụng | Lê Quang Trường | Bảng so sánh giải pháp đã có, nguồn tham khảo và khoảng trống |
-| CP5 — Quy trình trước/sau | Mai Văn Thanh | Lê Minh Phụng | Sơ đồ quy trình, xác định bottleneck và bảng before/after |
-| CP5 — Problem Statement v0 | Mai Văn Thanh | Lê Minh Phụng, Lê Quang Trường | Bản mô tả bài toán có metric và boundary |
-| CP6 — Mức can thiệp + Problem Statement v1 | Lê Quang Trường | Lê Minh Phụng, Mai Văn Thanh | So sánh No AI/Rule/Workflow/Agent, AI Canvas, tiêu chí đánh giá và bản v1 |
-| CP6 — Quyết định | Lê Minh Phụng | Lê Quang Trường, Mai Văn Thanh | Đánh giá bốn rủi ro, kết luận và ngưỡng dừng |
+| Checkpoint                                 | Người chính     | Người hỗ trợ                   | Sản phẩm                                                                  |
+| ------------------------------------------ | --------------- | ------------------------------ | ------------------------------------------------------------------------- |
+| CP3 — Hội tụ nhóm                          | Lê Minh Phụng   | Lê Quang Trường, Mai Văn Thanh | Bảng pitch, cluster, cây OST, bảng chấm điểm và lý do chọn candidate      |
+| CP4 — Kiểm chứng                           | Lê Quang Trường | Lê Minh Phụng, Mai Văn Thanh   | Assumption map, ghi chép phỏng vấn hoặc kết quả survey                    |
+| CP4 — Research                             | Lê Minh Phụng   | Lê Quang Trường                | Bảng so sánh giải pháp đã có, nguồn tham khảo và khoảng trống             |
+| CP5 — Quy trình trước/sau                  | Mai Văn Thanh   | Lê Minh Phụng                  | Sơ đồ quy trình, xác định bottleneck và bảng before/after                 |
+| CP5 — Problem Statement v0                 | Mai Văn Thanh   | Lê Minh Phụng, Lê Quang Trường | Bản mô tả bài toán có metric và boundary                                  |
+| CP6 — Mức can thiệp + Problem Statement v1 | Lê Quang Trường | Lê Minh Phụng, Mai Văn Thanh   | So sánh No AI/Rule/Workflow/Agent, AI Canvas, tiêu chí đánh giá và bản v1 |
+| CP6 — Quyết định                           | Lê Minh Phụng   | Lê Quang Trường, Mai Văn Thanh | Đánh giá bốn rủi ro, kết luận và ngưỡng dừng                              |
 
 ## Cá nhân
 
