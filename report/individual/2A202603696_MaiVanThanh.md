@@ -1,16 +1,15 @@
-# Báo cáo cá nhân — MSSV_HoTen
+# Báo cáo cá nhân — 2A202603696_MaiVanThanh
 
-> Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
-> Mỗi thành viên một file trong `report/individual/` trên repo nhóm: copy template này thành file mới, điền, rồi commit bằng tài khoản GitHub của bạn. Không viết hộ người khác.
+> Phần CP5 được AI hỗ trợ rà soát theo repo mới nhất. Mục 4–6 thuộc CP7 chỉ có mốc đối chiếu và câu hỏi gợi ý; Thanh tự ghi đóng góp, nhật ký AI và Reflection từ trải nghiệm thật.
 
 ## 1. Thông tin học viên
 
-- Họ tên:Mai Văn Thanh
-- MSSV:2A202603696
+- Họ tên: Mai Văn Thanh
+- MSSV: 2A202603696
 - Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm:PhungTruongThanh
-- Link repo nhóm:https://github.com/okuminhphen/K5-L3A-Day02-PhungTruongThanh-DiscoveryProblemFraming
+- Tên nhóm: PhungTruongThanh
+- Link repo nhóm: https://github.com/okuminhphen/K5-L3A-Day02-PhungTruongThanh-DiscoveryProblemFraming
 
 ---
 
@@ -76,7 +75,7 @@ HIỆN TẠI — khoảng 3–4 ngày ôn/môn (ước lượng)
 | Success metric (baseline → target)        | Baseline: khoảng 5–10 phút/buổi. Mục tiêu thử nghiệm đề xuất: không quá 2 phút/buổi và không phải đọc lại tên; cần xác nhận với giảng viên, chưa phải kết quả thực tế. |
 | Phương án không dùng AI                   | Dùng danh sách lớp và quy trình điểm danh thống nhất; có thể thử biểu mẫu/QR để sinh viên tự xác nhận, sau đó giảng viên đối chiếu danh sách.                          |
 | Giả thuyết về AI (nếu có)                 | Chưa thấy cần AI; quy trình rõ ràng hoặc công cụ xác nhận theo quy tắc có thể đủ.                                                                                      |
-| Cảm nhận nhanh                            | Rule / Workflow; nên thử cách đơn giản trước, chưa cần Agent.                                                                                                          |
+| Cảm nhận nhanh                            | No AI hoặc Rule: chuẩn hóa cách điểm danh hoặc dùng biểu mẫu theo quy tắc; chưa có lý do cần AI. |
 
 Quy trình nháp hiện tại:
 
@@ -99,7 +98,7 @@ HIỆN TẠI — khoảng 5–10 phút/buổi
 | Success metric (baseline → target)        | Baseline: cần hỗ trợ vài lần mỗi tuần, khoảng 5–10 phút/lần. Mục tiêu thử nghiệm đề xuất: giảm một nửa số lần phải nhắc lại cùng thao tác sau khi có hướng dẫn dễ nhớ; cần ghi lại trong 2 tuần để xác nhận baseline và mục tiêu. |
 | Phương án không dùng AI                   | Tạo hướng dẫn ngắn bằng chữ/hình cho từng thao tác, chỉ dẫn bố mẹ thực hành lại; không ghi mật khẩu, mã OTP hay thông tin tài khoản vào hướng dẫn.                                                                                |
 | Giả thuyết về AI (nếu có)                 | Có thể nhờ AI diễn đạt hướng dẫn thành các bước đơn giản, nhưng cần tự kiểm tra từng bước trên ứng dụng thật. Không cung cấp thông tin đăng nhập/mã OTP cho AI và không để AI thực hiện giao dịch.                                |
-| Cảm nhận nhanh                            | Workflow (hướng dẫn/checklist có người kiểm tra; không cần Agent).                                                                                                                                                                |
+| Cảm nhận nhanh                            | No AI trước: hướng dẫn bằng chữ/hình và thực hành. Chỉ gọi là Workflow có AI nếu AI thực sự hỗ trợ một bước tạo nháp hướng dẫn; người hỗ trợ kiểm trước khi dùng. |
 
 Quy trình nháp hiện tại:
 
@@ -111,8 +110,8 @@ HIỆN TẠI — vài lần/tuần, khoảng 5–10 phút/lần
 
 ### Card muốn pitch nhất
 
-- Card số: Chưa chọn; tạm cân nhắc Card #1 vì khối lượng tài liệu và thời gian ôn mỗi môn khá lớn.
-- Vì sao: Đây mới là gợi ý dựa trên số liệu CP1, chưa phải lựa chọn cuối cùng của tôi.
+- Card số: #1 — tương ứng C1 trong ghi nhận CP3 của báo cáo nhóm.
+- Vì sao chọn để thảo luận: Khối lượng 150–300 trang PDF/môn và thời gian ôn ước lượng 3–4 ngày/môn tạo pain cụ thể; cần kiểm chất lượng ôn, không hứa dự đoán phần chắc chắn thi.
 - Câu hỏi muốn nhóm phản biện: Làm sao xác định nội dung trọng tâm có căn cứ, thay vì chỉ đoán nội dung có thể vào đề?
 
 ### AI đã phản biện card thế nào
@@ -127,37 +126,44 @@ HIỆN TẠI — vài lần/tuần, khoảng 5–10 phút/lần
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-| Hoạt động                  | Tôi đã làm gì?         | Kết quả / ảnh hưởng tới bài nhóm |
-| -------------------------- | ---------------------- | -------------------------------- |
-| Pitch Problem Card         |                        |                                  |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt:    |                                  |
-| Nhận phản biện             | Câu hỏi tôi nhận được: | Tôi đã sửa gì:                   |
-| Gom cluster / cây OST      |                        |                                  |
-| Chọn candidate problem     |                        |                                  |
-| Kiểm chứng / research      |                        |                                  |
-| Quy trình nhóm             |                        |                                  |
-| Problem Statement          |                        |                                  |
-| Mức can thiệp AI           |                        |                                  |
-| Quyết định                 |                        |                                  |
+**Gợi ý để tự điền, chưa phải nhật ký tham gia đã xác nhận.** Cột giữa dẫn lại tài liệu hoặc sản phẩm được chuẩn bị; Thanh tự viết cột cuối, chỉ nhận những việc thực sự đã làm. Xem thêm [hướng dẫn CP7](../assets/cp7-writing-guide.md).
+
+| Hoạt động | Mốc tài liệu để đối chiếu / câu hỏi gợi ý | Thanh tự ghi việc đã làm và thay đổi cụ thể |
+|---|---|---|
+| Pitch Problem Card | Báo cáo nhóm mục 2.1 ghi C1 ôn PDF, C2 điểm danh, C3 hướng dẫn bố mẹ; C1 được 26/35 ở shortlist. Khi pitch đã nhấn mạnh pain nào? | |
+| Phản biện bài của bạn khác | Mục 2.1 ghi câu hỏi cho A2 về một kênh hỗ trợ và B2 về số deadline mỗi tuần. Có câu trả lời/thay đổi thực tế nào sau đó? | |
+| Nhận phản biện | Trường hỏi C1 về căn cứ biết phần chắc chắn thi. Có đổi kỳ vọng, metric chất lượng hay boundary không? | |
+| Gom cluster / cây OST | Cây OST hiện tập trung B1, loại nhánh “làm bot AI”. Thanh đã góp chi tiết gì, có bằng chứng ở đâu? | |
+| Chọn candidate problem | B1 đạt 31/35; C1 khó kiểm chất lượng ôn ngay trong lab. Thanh đã cân nhắc và thay đổi quan điểm thế nào? | |
+| Kiểm chứng / research | CP4 có assumption map, bộ câu hỏi và research của nhóm; chưa có phỏng vấn ngoài nhóm. Thanh có thực sự kiểm nguồn hoặc góp giả định nào? | |
+| Quy trình nhóm | Mục 4 có C1–C6, No AI và Workflow có điều kiện; kế hoạch metric có nhật ký trống. Thanh đã tự kiểm hoặc sửa bước nào? | |
+| Problem Statement | Mục 5 có v0 sáu trường hiệu chỉnh từ bản GitHub, mục 7 đối chiếu v1. Thanh đồng ý/bác điểm nào của phản biện và vì sao? | |
+| Mức can thiệp AI | CP6 giữ Workflow có điều kiện, thử No AI/Rule trước. Thanh có đóng góp gì cho lập luận chọn mức? | |
+| Quyết định | Nhóm hiện ghi Not Yet. Thanh có tham gia rà metric/ngưỡng dừng nào và đã tự xác nhận nội dung nào? | |
 
 ---
 
 ## 5. Dùng AI
 
-| Checkpoint                     | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
-| ------------------------------ | ---------------------- | ----------------- | -------------------------- | ----------------------------------- |
-| CP1 Scan                       |                        |                   |                            |                                     |
-| CP2 Problem Card               |                        |                   |                            |                                     |
-| CP4 Research                   |                        |                   |                            |                                     |
-| CP5 Quy trình                  |                        |                   |                            |                                     |
-| CP5–6 Problem Statement        |                        |                   |                            |                                     |
-| CP6 Mức can thiệp / quyết định |                        |                   |                            |                                     |
+**Gợi ý để tự ghi nhật ký AI.** Dữ kiện dưới đây giúp nhớ lần dùng AI; phần đánh giá và sửa bằng nhận định cá nhân để trống cho Thanh tự viết. Không nhận là đã tự sửa chỉ vì AI tạo ra một bản cập nhật.
+
+| Checkpoint | Dữ kiện sử dụng AI để đối chiếu | Thanh tự ghi: hữu ích ở đâu, sai/hời hợt ở đâu, đã tự sửa gì |
+|---|---|---|
+| CP1 Scan | Mục 2 ghi AI sắp xếp năm tình huống được cung cấp. Có ý nào đã giữ/bỏ? Có số liệu nào cần tự kiểm lại? | |
+| CP2 Problem Card | Có phản biện về thời gian chưa đo và chất lượng ôn; đã phân biệt No AI/Rule với Workflow có AI. Thanh đã nhận/bác điểm nào? | |
+| CP4 Research | Lần này AI chỉ đọc phần research đã có và chuẩn bị kế hoạch đo, không phỏng vấn. Thanh đã tự mở/kiểm nguồn nào? | |
+| CP5 Quy trình | AI chuyển mô tả B1 thành sơ đồ, bảng và nhật ký. Sơ đồ có bỏ thao tác hoặc che công sức kiểm nguồn không? Đã tự đối chiếu bước nào? | |
+| CP5–6 Problem Statement | AI phản biện và hỗ trợ hiệu chỉnh v0/v1 từ GitHub: tách 15 phút ước lượng, bỏ tần suất tháng chưa có căn cứ, thêm cách đo chất lượng. Thanh cần tự kiểm/chốt những sửa đổi nào? | |
+| CP6 Mức can thiệp / quyết định | Giữ Not Yet, Workflow có điều kiện và thử No AI trước. Có nhận định nào AI suy quá bằng chứng hoặc cần nhóm trao đổi thêm? | |
+| CP7 Reflection | AI chỉ chuẩn bị câu hỏi tự soi trong file gợi ý; câu trả lời mục 4–6 và điều học được ở TEAM.md do Thanh tự viết. | |
 
 ---
 
 ## 6. Reflection (CP7)
 
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
+
+**Gợi ý riêng từng câu:** [cp7-writing-guide.md](../assets/cp7-writing-guide.md). Các câu trả lời bên dưới được để trống để bạn tự viết.
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
@@ -177,4 +183,9 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 ## 7. Tài liệu tham khảo
 
--
+- [Báo cáo nhóm — candidate B1, quy trình và phản biện CP5](../team/group_report.md).
+- [Problem Card B1 của Lê Quang Trường — dữ liệu đầu vào cho quy trình](2A202603663_LeQuangTruong.md).
+- [Kế hoạch metric CP5 — định nghĩa, nhật ký và bàn giao CP4/CP6](../assets/cp5-metric-plan.md).
+- [Gợi ý tự viết CP7 — câu hỏi tự soi và checklist](../assets/cp7-writing-guide.md).
+- [Phân công và bằng chứng đóng góp](../../TEAM.md).
+- [Quy định sử dụng AI](../../RULES.md) và [yêu cầu checkpoint](../../CHECKPOINTS.md).

@@ -160,70 +160,135 @@ Bước tiếp theo là quan sát cách học viên sử dụng các tính năng
 
 ## 4. Quy trình trước/sau (CP5)
 
+**Phụ trách:** Mai Văn Thanh. Sơ đồ được AI hỗ trợ chuyển từ mô tả trong [Problem Card B1 của Trường](../individual/2A202603663_LeQuangTruong.md) và candidate đã chọn tại mục 2.4; Thanh cần kiểm tra từng bước với người dùng thật.
+
+**Cơ sở và trạng thái:** CP4 đã có assumption map, bộ câu hỏi và research, nhưng chưa có phỏng vấn ngoài nhóm hay số đo thời gian. Khoảng 15 phút/ngày là ước lượng của Trường cho việc đọc lướt và nhận biết tin quan trọng, chưa phải tổng thời gian đã đo. Quy trình dưới đây là bản thiết kế để kiểm tra; CP6 hiện kết luận **Not Yet**, chỉ xem xét Workflow sau khi thử cách đơn giản hơn. Định nghĩa metric, mục tiêu đề xuất và nhật ký đo nằm trong [kế hoạch metric CP5](../assets/cp5-metric-plan.md).
+
 ### 4.1. Quy trình hiện tại
 
-Sơ đồ (ASCII):
-
-```text
-HIỆN TẠI — 5 bước, ~15 phút/ngày, 5/5 bước thủ công
-
-[1. Mở Discord & vào kênh lớp: 1']
-→ [2. Cuộn lên tìm vị trí tin chưa đọc: 2']
-→ [3. Đọc lướt hàng trăm tin chat để lọc thông báo quan trọng: 10'] ← BOTTLENECK (tin trôi, dễ sót)
-→ [4. Đối chiếu tin nhắn xem có phải bản cập nhật mới nhất không: 1']
-→ [5. Tự ghi chú deadline / đổi lịch vào sổ hoặc lịch cá nhân: 1']
+```mermaid
+flowchart TD
+    C1["C1 · Học viên mở Discord"] --> C2["C2 · Tới vùng tin chưa đọc"]
+    C2 --> C3["C3 · Đọc lướt từng tin — nghẽn"]
+    C3 --> C4["C4 · Nhận biết hạn nộp hoặc đổi lịch — nghẽn"]
+    C4 -->|"Có việc cần ghi"| C5["C5 · Ghi thông tin cần làm vào ghi chú hoặc lịch"]
+    C5 --> C6["C6 · Kiểm tra còn tin cần đọc hay đã xong"]
+    C4 -->|"Không có việc cần ghi"| C6
+    C6 -->|"Còn tin"| C3
+    C6 -->|"Đã đủ phạm vi"| CE["Kết thúc phiên"]
+    style C3 fill:#fff0cc,stroke:#a65d00
+    style C4 fill:#fff0cc,stroke:#a65d00
 ```
 
-| Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
-|---:|---|---|---|---|---|
-| 1 | Học viên | Thông báo ứng dụng Discord | Đã vào đúng kênh chat lớp học | ~1 phút / mỗi ngày | Thường làm vào cuối ngày hoặc sáng trước giờ học |
-| 2 | Học viên | Hàng trăm tin nhắn mới tích lũy | Điểm bắt đầu đọc (tin chưa đọc gần nhất) | ~2 phút / mỗi ngày | Dễ bị trượt tay cuộn quá hoặc nản vì quá nhiều tin |
-| 3 | Học viên | Dòng tin nhắn thảo luận hỗn tạp | Nhận diện tin có chứa deadline, đổi lịch | ~10 phút / mỗi ngày | **BOTTLENECK CHÍNH:** Tin quan trọng nằm lẫn trong thảo luận làm bài, spam sticker, meme |
-| 4 | Học viên | Tin thông báo vừa tìm được | Xác định tin này còn hiệu lực hay đã bị sửa đổi | ~1 phút / mỗi ngày | Dễ nhầm nếu mentor đăng đính chính ở tin nhắn sau đó |
-| 5 | Học viên | Nội dung ngày/giờ chính xác | Note cá nhân (Notion, Google Calendar, sổ tay) | ~1 phút / mỗi ngày | Nhập thủ công, có nguy cơ nhập sai múi giờ hoặc gõ nhầm |
+| Bước | Actor | Input | Output | Thời gian / tần suất | Handoff / ghi chú |
+|---|---|---|---|---|---|
+| C1 | Học viên | Nhu cầu xem lại thông báo của lớp | Kênh học tập được mở | Chưa đo, ghi t1; mỗi phiên kiểm tra | Học viên tiếp tục C2; chỉ tính kênh nằm trong phạm vi khảo sát |
+| C2 | Học viên | Kênh và vị trí chưa đọc | Vùng tin cần rà soát | Chưa đo, ghi t2; mỗi phiên | Cùng học viên chuyển sang C3 |
+| C3 | Học viên | Tin thảo luận lẫn thông báo | Những tin có thể liên quan việc cần làm | Chưa đo riêng, ghi t3; lặp theo số tin | Chuyển sang C4; chưa có log xác nhận số tin/ngày |
+| C4 | Học viên | Tin nghi có hạn nộp hoặc đổi lịch cùng ngữ cảnh | Nhận định tin nào quan trọng và thông tin cần ghi | Chưa đo riêng, ghi t4; mỗi tin nghi liên quan | Chuyển sang C5 nếu có việc cần ghi; nếu không có, đi C6 |
+| C5 | Học viên | Nội dung đã nhận biết tại C4 | Ghi chú hoặc sự kiện lịch cá nhân | Chưa đo, ghi t5; khi có thông báo cần hành động | Không đồng nhất việc nhận biết tin với việc đã nộp bài/đi học |
+| C6 | Học viên | Vùng tin đã xem và ghi chú vừa tạo | Tiếp tục đọc hoặc kết thúc phiên | Chưa đo, ghi t6; cuối mỗi lượt rà soát | Còn tin thì quay C3; cộng thời gian mọi lượt lặp |
 
-**Bottleneck chính:** Bước 3 — Đọc lướt từng dòng tin nhắn thảo luận để tự nhận diện tin nào là thông báo quan trọng (hạn nộp, đổi lịch). Mất khoảng 10–12 phút/ngày vì thông báo bị trôi nhanh giữa hàng trăm tin chat thường ngày, gây mệt mỏi và rủi ro bỏ sót cao.
+**Cụm bước nghẽn tạm xác định:** C3–C4: đọc lướt nhiều tin và tự phân biệt thông báo hạn nộp/đổi lịch với thảo luận. Card B1 ước lượng gộp hai bước khoảng 15 phút/ngày, 5 ngày/tuần; chưa tách t3 và t4 để xác định bước nào chiếm nhiều thời gian nhất. Không tự chia con số này cho từng bước hoặc coi đó là tổng t1–t6. Tổng thời gian hiện tại phải được đo lại, gồm cả quay lại đọc và sửa ghi chú.
+
+**Tần suất và bằng chứng:** 5 ngày/tuần và một lần bỏ sót tin đổi lịch là thông tin tự khai trong báo cáo Trường. Repo chưa có ảnh/link chứng minh hay dữ liệu người ngoài nhóm; khoảng 40 thành viên kênh không phải 40 người đã xác nhận pain.
 
 ### 4.2. Quy trình tương lai
 
-Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
+Hai phương án dưới đây giữ cùng đầu ra: học viên nhận biết đúng việc cần làm, kiểm tra nguồn và tự ghi nhận. Thử phương án A trước để biết sửa quy trình đã đủ chưa; phương án B minh họa Workflow có điều kiện tại CP6, chưa được triển khai. Nếu sau A chỉ cần lọc tag cố định, dừng ở Rule và bỏ bước AI của B.
 
-```text
-TƯƠNG LAI — 4 bước, ~2.5 phút/ngày, 1/4 bước thủ công
+**A — Sửa quy trình, không dùng AI:** dựa trên phương án ghim tin và quy ước tag đã có trong Card B1. Việc người đăng đánh dấu/ghim thông báo là phần chuẩn bị cần họ đồng ý; ghi riêng thời gian vận hành này, không coi là miễn phí.
 
-[1. Lọc tin nhắn từ người có thẩm quyền / kênh thông báo: 10s]   ← RULE (webhook/bot filter theo Role/Channel)
-→ [2. Trích xuất hạn nộp, môn học, tóm tắt 1 câu kèm link gốc: 20s] ← AI (LLM trích xuất thực thể & tóm tắt)
-→ [3. Hiển thị bảng tổng hợp thông báo mới trong ngày: 10s]         ← RULE (giao diện dashboard / bot digest)
-→ [4. Học viên đọc tóm tắt, bấm link kiểm tra tin gốc & lưu lịch: 2'] ← CON NGƯỜI (HITL)
-
-BOUNDARY: AI không tự ý thêm lịch vào Calendar của học viên; AI không suy đoán deadline nếu tin nhắn không ghi rõ ngày giờ; bắt buộc luôn hiển thị link dẫn tới tin nhắn Discord gốc.
-PHƯƠNG ÁN QUAY VỀ: Nếu bot gặp sự cố hoặc bản tóm tắt AI thiếu thông tin, học viên dùng tính năng ghim tin (Pinned Messages) và kênh #announcement hoặc tìm kiếm theo cú pháp có sẵn.
+```mermaid
+flowchart TD
+    N1["N1 · Người: mở tập thông báo được đánh dấu hoặc ghim"] --> N2["N2 · Người: đọc và chọn tin liên quan"]
+    N2 --> N3["N3 · Người: kiểm tin gốc, thời hạn và bản cập nhật"]
+    N3 -->|"Đã rõ"| N4["N4 · Người: ghi chú hoặc nhập lịch"]
+    N4 --> N5["N5 · Người: kiểm phạm vi đã xem và kết thúc phiên"]
+    N2 -->|"Không có mục cần kiểm"| N5
+    N3 -->|"Không có việc mới cần ghi"| N5
+    N5 -->|"Còn mục"| N2
+    N5 -->|"Đã đủ phạm vi"| NE["Kết thúc phiên"]
+    N1 -->|"Thiếu tập tin hoặc chưa được đánh dấu đầy đủ"| FA["F · Đọc tay vùng tin gốc; hỏi người đăng nếu còn mơ hồ"]
+    N3 -->|"Mâu thuẫn hoặc thiếu nguồn"| FA
+    N5 -->|"Còn vùng chưa được rà soát"| FA
 ```
+
+**B — Workflow có điều kiện, chỉ thử nếu No AI/Rule còn nghẽn:** các bước cố định, AI chỉ phân loại và trích xuất nháp ở W2. Cần xác minh quyền truy cập, phạm vi tin và độ đầy đủ dữ liệu đầu vào trước khi thử; đây chưa phải một bot đã chạy.
+
+```mermaid
+flowchart TD
+    W1["W1 · Rule: nhận tin trong phạm vi được phép, khử trùng và ghi phạm vi đã nhận"] --> W2["W2 · AI: phân loại và trích xuất danh sách nháp có nguồn"]
+    W2 --> W3["W3 · Rule: kiểm cấu trúc, mã tin và nguồn; tạo bản nháp chờ duyệt"]
+    W3 -->|"Đủ cấu trúc"| W4["W4 · Người: đối chiếu tin gốc, bản cập nhật và vùng chưa được xử lý"]
+    W4 -->|"Đã xác nhận"| W5["W5 · Người: tự ghi chú hoặc nhập lịch; xác nhận không có việc nếu phù hợp"]
+    W5 --> WE["Kết thúc phiên; chỉ chia sẻ bản đã duyệt nếu cần"]
+    W1 -->|"Thiếu dữ liệu hoặc không có quyền"| FB["F · Đọc tay vùng tin gốc; sửa ghi chú; hỏi người đăng nếu cần"]
+    W3 -->|"Thiếu nguồn, lỗi hoặc không có kết quả"| FB
+    W4 -->|"Sai, mơ hồ hoặc chưa đủ phạm vi"| FB
+    style W4 fill:#ddf2df,stroke:#397342
+```
+
+| Bước | Actor / loại xử lý | Input → Output | Thời gian / tần suất cần ghi |
+|---|---|---|---|
+| N1 | Con người | Tập thông báo đã đánh dấu/ghim → vùng tin cần đọc | Chưa đo, n1; mỗi phiên |
+| N2 | Con người | Vùng tin → danh sách cần kiểm tra | Chưa đo, n2; cộng mọi lượt lặp |
+| N3 | Con người, điểm kiểm tra bắt buộc | Danh sách + nguồn + cập nhật → thông tin được xác nhận hoặc cần hỏi lại | Chưa đo, n3; mỗi mục liên quan |
+| N4 | Con người | Thông tin đã xác nhận → ghi chú/lịch | Chưa đo, n4; khi có việc cần làm |
+| N5 | Con người | Phạm vi đã đọc → kết thúc hoặc quay lại đọc tay | Chưa đo, n5; mỗi phiên |
+| W1 | Rule, không AI | Tập tin được phép + khoảng thời gian → dữ liệu và phạm vi đã nhận | Chưa đo, w1; mỗi lượt chạy, gồm chờ/lỗi |
+| W2 | AI, chỉ trong kịch bản Workflow có điều kiện | Dữ liệu W1 → danh sách nháp, kèm tin nguồn và phần chưa rõ | Chưa đo, w2; mỗi lượt chạy; bỏ AI nếu Rule đã đủ |
+| W3 | Rule, không AI | Danh sách nháp → kết quả đủ cấu trúc hoặc báo lỗi | Chưa đo, w3; không xác nhận nội dung đúng chỉ bằng cấu trúc |
+| W4 | Con người, điểm kiểm tra bắt buộc | Nháp + nguồn + phạm vi W1 → thông tin đã kiểm hoặc cần đọc tay | Chưa đo, w4; tính cả thời gian mở nguồn và sửa sai |
+| W5 | Con người | Thông tin đã kiểm → ghi chú/lịch hoặc xác nhận không có việc cần ghi | Chưa đo, w5; không để hệ thống tự ghi lịch |
+| F | Con người, phương án quay về | Lỗi/thiếu/mơ hồ → đọc nguồn theo C2–C6 hoặc hỏi người đăng | Chưa đo, f; luôn cộng vào thời gian, không loại phiên lỗi |
+
+**Boundary của phương án có AI:** dữ liệu chỉ thuộc kênh và khoảng thời gian được phép; không lấy tin nhắn riêng hoặc tự mở rộng phạm vi. AI chỉ tạo nháp, không tự phát hành thông báo đã xác nhận, nhắc cả lớp, sửa/xóa tin, nhập lịch hay thay học viên quyết định thời hạn. Bản nháp phải ghi rõ “chờ kiểm tra”; chỉ chia sẻ như thông tin đã xác nhận sau khi người kiểm duyệt. Thiếu nguồn hoặc thiếu ngày/giờ thì phải ghi chưa rõ, không suy đoán. Học viên kiểm bản gốc và bản sửa/hủy trước khi hành động; mâu thuẫn còn tồn tại thì hỏi người đăng. Không gửi dữ liệu kênh cho dịch vụ AI khi chưa có chấp thuận phù hợp.
+
+**Quay về khi có lỗi:** W1/W3/W4 thất bại thì ngừng dùng nháp cho phần đó, đọc trực tiếp toàn bộ vùng chưa được xử lý và ngữ cảnh liên quan theo C2–C6, rồi tự sửa ghi chú/lịch. Một danh sách rỗng không chứng minh rằng không có thông báo. Nhật ký phải ghi lỗi, thời gian sửa, phạm vi thiếu và thời gian chờ xác nhận riêng; giữ phương án A khi chưa chứng minh được lợi ích của B.
 
 ### 4.3. Before / after
 
-| Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
-|---|---:|---:|---|
-| Số bước | 5 bước | 4 bước | Tự động hóa khâu gom tin và trích xuất |
-| Tổng thời gian | ~15 phút/ngày | ~2.5 phút/ngày | Giảm hơn 80% thời gian tìm kiếm tin |
-| Số bước thủ công | 5/5 bước | 1/4 bước (bước 4) | Con người chỉ đọc bản tóm tắt và kiểm chứng tin gốc |
-| Bottleneck chính | Đọc lướt hàng trăm tin chat | Học viên kiểm tra tin gốc (kiểm soát an toàn) | Chuyển điểm nghẽn sang khâu xác nhận chất lượng (HITL) |
-| Rủi ro mới phát sinh | — | AI trích xuất sai ngày giờ, bỏ sót thông báo viết ngầm | Khắc phục bằng boundary và bắt buộc đính kèm link tin gốc |
+Số bước dưới đây là số **loại bước chức năng** trên luồng chính, không phải số thao tác/click hay số lần lặp. Nhánh F và công sức người đăng được ghi riêng để tránh che chi phí.
+
+| Chỉ số | Trước — C | Sau A — No AI, dự kiến | Sau B — Rule/AI tùy điều kiện, dự kiến | Cách kiểm |
+|---|---|---|---|---|
+| Số bước luồng chính | 6: C1–C6 | 5: N1–N5 | 5: W1–W5, cộng F nếu lỗi | Không tính nút kết thúc là bước xử lý; ít bước không tự chứng minh nhanh hơn |
+| Tổng thời gian hoàn tất | Chưa đo tổng t1–t6 | Chưa đo tổng n1–n5 + F | Chưa đo tổng w1–w5 + F, kể cả chờ xử lý | Đo cùng điểm bắt đầu/kết thúc; không dùng 15 phút ở bottleneck làm tổng baseline |
+| Thời gian tìm và xác nhận thông báo | Khoảng 15 phút/ngày cho C3–C4, tự ước lượng; chưa đủ phạm vi đo mới | Target đề xuất: trung vị dưới 3 phút/học viên-ngày | Cùng target, gồm cả kiểm nguồn và sửa lỗi | Đo baseline lại cùng định nghĩa; không tính phần trăm cải thiện từ 15 phút ước lượng |
+| Số bước học viên làm thủ công | 6 loại bước; C5 chỉ khi có việc cần ghi | 5; thêm công sức đánh dấu/ghim của người đăng | 2: W4–W5; thêm F, cấu hình và vận hành khi phát sinh | Tách công sức học viên và công sức người vận hành |
+| Bottleneck chính | Đọc lướt và nhận biết tin quan trọng | Có thể chuyển sang độ đầy đủ của việc đánh dấu và kiểm nguồn | Có thể chuyển sang kiểm nháp, cập nhật và xử lý phần thiếu | Đây là giả thuyết thiết kế; đo thời gian từng bước để kiểm tra |
+| Thông báo quan trọng bị bỏ sót | Một lần đổi lịch được tự khai; chưa biết kỳ quan sát/tỷ lệ | Target đề xuất: FN = 0 trong tập thử có sự kiện chuẩn | Cùng yêu cầu; đo cả khi hệ thống trả danh sách rỗng | Đối chiếu danh sách chuẩn độc lập, không chỉ đếm phản ánh; không suy thành 1 lần/tháng |
+| Rủi ro mới phát sinh | Bỏ sót hoặc ghi sai khi đọc tay | Tin không được đánh dấu; phụ thuộc người đăng | Bỏ sót do lọc, nháp sai thời hạn, mất ngữ cảnh, lấy thiếu dữ liệu hoặc vượt quyền | Ghi lỗi và tín hiệu phản bác; chưa có kết quả thử nghiệm |
+
+**Bàn giao để đo:** Thanh dùng [nhật ký và định nghĩa metric](../assets/cp5-metric-plan.md); Phụng phụ trách CP4 theo bảng phân công mới, Trường hỗ trợ phỏng vấn; cả nhóm cùng kiểm phương án đơn giản. Chưa có cơ sở tính phần trăm tiết kiệm hoặc khẳng định đạt dưới 3 phút/ngày. Thời gian từng bước còn thiếu số đo thực tế, cần bổ sung sau quan sát; không chia ngược 15 phút thành các con số cho đủ bảng.
 
 ---
 
 ## 5. Problem Statement v0 (CP5)
 
+**Phụ trách:** Mai Văn Thanh. Bản dưới hiệu chỉnh v0 đã có trên GitHub tại commit `ab07389`, dựa trên Card B1 và phản biện về metric. Đây là **bản dự thảo để nhóm rà soát**, chưa phải Problem Statement đã được kiểm chứng ngoài nhóm. Các sửa đổi do AI hỗ trợ được ghi riêng; không suy thành nhóm đã đồng ý.
+
+### 5.1. Sáu trường của v0
+
 | Trường | Nội dung |
 |---|---|
-| **Actor** | Học viên tham gia học tập và làm bài tập trên kênh Discord chung của lớp (~40 học viên). |
-| **Quy trình** | Hằng ngày mở Discord → cuộn tìm tin chưa đọc → đọc lướt qua hàng trăm tin chat thảo luận để lọc thông báo quan trọng → đối chiếu cập nhật mới nhất → ghi chú deadline vào lịch cá nhân. |
-| **Bottleneck** | Khâu đọc lướt hàng trăm tin nhắn thảo luận để nhận ra thông báo hạn nộp hoặc đổi lịch (mất ~10–12 phút/ngày) vì tin nhắn quan trọng dễ bị trôi nhanh và lẫn lộn giữa tin chat thường nhật. |
-| **Impact** | Mỗi học viên mất ~15 phút/ngày (~75 phút/tuần); từng xảy ra trường hợp học viên bỏ sót thông báo đổi lịch học hoặc nộp muộn bài tập; tạo tâm lý bất an, phải hỏi đi hỏi lại bạn cùng lớp. |
-| **Success Metric** (baseline → target, cách đo) | **Baseline:** Mất ~15 phút/ngày để tìm và xử lý thông báo (ước lượng của Trường trong CP1–CP2); tỷ lệ bỏ sót thông báo quan trọng ~1 lần/tháng. <br>**Target:** Giảm thời gian tìm và nhận biết thông báo xuống dưới 3 phút/ngày; số thông báo quan trọng bị bỏ sót giảm về 0. <br>**Cách đo:** 3–5 học viên tự bấm giờ liên tục trong 1 tuần pilot; đếm số lần phản ánh bỏ sót hoặc nộp trễ deadline. |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | - AI **không được** tự động thêm hoặc sửa sự kiện lịch cá nhân khi người dùng chưa xác nhận. <br>- AI **không được** suy đoán hoặc tự bịa ra hạn nộp nếu tin nhắn không nêu rõ ngày giờ cụ thể. <br>- AI **bắt buộc** phải dẫn link kèm trích dẫn nguyên văn tin nhắn gốc trên Discord để học viên bấm vào kiểm tra lại (Human-in-the-Loop) trước khi quyết định hành động. |
+| **Actor** | Học viên lớp L3A cần theo dõi thông báo hạn nộp bài và đổi lịch trên Discord sau một khoảng chưa đọc tin. Bằng chứng hiện có là trải nghiệm tự thuật của Trường; khoảng 40 thành viên là quy mô lớp, chưa phải 40 người đã xác nhận gặp vấn đề. |
+| **Quy trình** | Mở kênh lớp → tới vùng tin chưa đọc → đọc lướt → nhận biết thông báo liên quan và kiểm ngữ cảnh/cập nhật → ghi chú hoặc nhập lịch khi cần → kiểm phạm vi còn lại, đọc tiếp hoặc kết thúc. Phạm vi chỉ gồm hạn nộp/đổi lịch liên quan học viên, không mở rộng sang ôn tài liệu hay nộp bài. |
+| **Bottleneck** | Cụm C3–C4: tìm trong dòng thảo luận và phân biệt thông báo cần hành động với trao đổi thông thường. Trường ước lượng gộp khoảng 15 phút/ngày, 5 ngày/tuần; chưa bấm giờ từng bước và chưa biết phần tìm hay phần xác nhận chiếm nhiều thời gian hơn. |
+| **Impact** | Theo tự thuật của Trường, việc rà tin chiếm khoảng 75 phút/tuần nếu quy đổi 15 × 5 và đã có một lần bỏ sót thông báo đổi lịch. Chưa xác định kỳ quan sát, tỷ lệ bỏ sót, thiệt hại do nộp trễ hay mức ảnh hưởng của các học viên khác. |
+| **Success Metric** — baseline → target, cách đo | **Baseline tạm:** khoảng 15 phút/ngày cho C3–C4 là ước lượng; tổng thời gian và tỷ lệ bỏ sót chưa đo. **Target đề xuất:** trung vị thời gian tìm **và xác nhận** dưới 3 phút/học viên-ngày; FN = 0 trong tập thử có sự kiện chuẩn; 100% sự kiện đã xác nhận có nguồn và đúng hạn/lịch, trạng thái mới nhất. **Cách đo đề xuất:** 3–5 học viên ghi toàn bộ phiên trong 3 ngày baseline rồi 5 ngày học thử No AI; cùng phạm vi kênh, cùng định nghĩa, cộng kiểm nguồn/sửa lỗi/fallback. Một người kiểm độc lập rà toàn bộ cửa sổ tin để lập danh sách chuẩn và tính TP/FP/FN. Ghi thêm tổng thời gian hoàn tất và công sức người quản lý để thấy việc chuyển chi phí. Xem [kế hoạch đo](../assets/cp5-metric-plan.md). |
+| **Boundary / HITL** | Chỉ xử lý tin trong kênh/khoảng thời gian được phép. Nếu có AI, AI chỉ đề xuất nháp có nguồn; không tự đoán thời hạn, tự tạo/sửa lịch, sửa/xóa tin hoặc phát hành thông báo đã xác nhận. Học viên kiểm tin gốc, đối tượng áp dụng và bản cập nhật/hủy trước khi ghi nhận. Tin thiếu thời gian, mâu thuẫn hoặc nguồn không mở được phải giữ trạng thái chưa xác nhận và hỏi người đăng; khi lỗi quay về C2–C6, không coi nháp rỗng là không có việc. |
 
-Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
+### 5.2. Phản biện và chỉnh sửa trong bản dự thảo
+
+| Lỗ hổng được AI chỉ ra | Chỉnh sửa thể hiện trong tài liệu | Việc cần xác nhận từ nhóm/người dùng |
+|---|---|---|
+| Dùng 15 phút làm tổng quy trình, rồi tự chia thành 1–2–10–1–1 phút | Giữ 15 phút ở cụm C3–C4; các t1–t6 để chưa đo; không tính tỷ lệ tiết kiệm từ số ước lượng | Bấm giờ từng bước, kiểm tra có bỏ sót thao tác hay lượt đọc lại không |
+| Một lần bỏ sót bị đổi thành “1 lần/tháng”; quy mô lớp bị coi là mẫu xác nhận | Ghi đúng một lần tự thuật và giới hạn nguồn; bỏ tần suất tháng trong v0/v1 | Thu số sự kiện, kỳ quan sát và bằng chứng ngoài nhóm ở CP4 |
+| Chỉ đếm phản ánh sẽ không phát hiện thông báo chưa ai nhìn thấy | Đối chiếu toàn bộ cửa sổ tin với danh sách chuẩn độc lập, kể cả ngày kết quả rỗng | Chọn người kiểm có quyền xem, thống nhất sự kiện chuẩn và xử lý cập nhật/hủy |
+| Nhanh hơn có thể do bỏ kiểm nguồn hoặc chuyển công việc cho người đăng | Tính cả kiểm tra, sửa sai, fallback; ghi riêng tổng thời gian và công sức đánh dấu/ghim | Chốt target và mức công sức chấp nhận được trước khi thử |
+| Mặc định cần Workflow dù chưa thử cách đơn giản | Có phương án No AI trước; Workflow chỉ là kịch bản có điều kiện, phù hợp quyết định Not Yet | Nhóm tự quyết định sau bằng chứng, ghi đồng ý/không đồng ý với từng góp ý khi rà soát |
 
 - **Phản biện 1 (từ AI):** Baseline 15 phút/ngày và tần suất sót 1 lần/tháng mới chỉ là ước lượng chủ quan của 1 học viên (Trường), chưa có số liệu đo đạc thực tế của các bạn khác trong lớp.
   - *Nhóm đồng ý:* Nhóm xác định rõ con số 15 phút là giả thuyết ban đầu (đã ghi trong Assumption Map CP4) và sẽ tổ chức bấm giờ thực tế cho 3-5 học viên ở giai đoạn pilot để có baseline chuẩn xác.
@@ -233,6 +298,8 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 ---
 
 ## 6. Mức can thiệp AI (CP6)
+
+**Trạng thái:** phương án Workflow dưới đây có điều kiện, chưa được triển khai hoặc chứng minh hơn No AI/Rule. Giữ quyết định **Not Yet** ở mục 8; các ví dụ hội thoại là minh họa thiết kế, không phải dữ liệu phỏng vấn. Thanh hỗ trợ đối chiếu metric và boundary với CP5.
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
